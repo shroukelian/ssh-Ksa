@@ -395,3 +395,26 @@ footer { background: var(--secondary); color: white; padding: 80px 0 20px; }
         padding: 25px;
     }
 }
+
+
+
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
