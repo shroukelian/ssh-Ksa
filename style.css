@@ -1,0 +1,397 @@
+:root {
+    --primary: #d11b3d; /* اللون الأحمر المرجعي */
+    --secondary: #1a2c4e; /* الكحلي المرجعي */
+    --dark: #0f172a;
+    --light: #f4f7f6;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body { background: var(--white); color: var(--secondary); overflow-x: hidden; }
+
+.container { width: 85%; margin: auto; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.highlight { color: var(--primary); }
+
+/* Top Bar */
+.top-bar {
+    background: var(--secondary);
+    padding: 10px 0;
+    font-size: 0.85rem;
+}
+.top-bar a { color: var(--white); text-decoration: none; margin-left: 20px; }
+.top-bar i { color: var(--primary); margin-left: 5px; }
+
+/* Navbar */
+.navbar {
+    background: var(--white);
+    padding: 15px 0;
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 50px; }
+.logo .abbr { display: block; font-weight: 900; font-size: 1.5rem; color: var(--secondary); }
+.logo .full { font-size: 0.7rem; color: var(--primary); font-weight: 700; }
+
+.nav-links { display: flex; list-style: none; align-items: center; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--secondary); font-weight: 700; transition: 0.3s;padding: 15px; }
+.nav-links a:hover { color: var(--primary); }
+.btn-cta { background: var(--primary); color: white !important; padding: 8px 20px; border-radius: 5px; }
+
+/* Hero */
+.hero {
+    height: 85vh;
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    position: relative; display: flex; align-items: center; color: var(--white);
+}
+.hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(15, 23, 42, 0.7); }
+.hero-content { position: relative; z-index: 2; width: 60%; }
+.hero h1 { font-size: 3.5rem; font-weight: 900; margin: 20px 0; line-height: 1.2; }
+.btn { padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 700; margin-left: 15px; display: inline-block; transition: 0.3s; }
+.btn.primary { background: var(--primary); color: white; border: 2px solid var(--primary); }
+.btn.secondary { border: 2px solid white; color: white; }
+.btn:hover { transform: translateY(-5px); }
+
+/* Why Us Section */
+.why-us { padding: 100px 0; }
+.grid-2 { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
+.sec-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 30px; }
+.feature-item { display: flex; gap: 15px; margin-bottom: 25px; }
+.feature-item i { color: var(--primary); font-size: 2rem; }
+.about-img { position: relative; }
+.about-img img { width: 100%; border-radius: 15px; }
+.stats-overlay { position: absolute; bottom: -20px; left: -20px; background: var(--primary); color: white; padding: 30px; border-radius: 15px; text-align: center; }
+
+/* Services Grid */
+.services { background: var(--light); padding: 100px 0; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+.service-card { background: white; padding: 40px; border-radius: 10px; transition: 0.4s; text-align: center; }
+.service-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+.service-card:hover { transform: translateY(-15px); border-bottom: 5px solid var(--primary); }
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed; bottom: 30px; left: 30px;
+    background: #25d366; color: white;
+    width: 60px; height: 60px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer { background: var(--secondary); color: white; padding: 80px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; }
+.footer-links ul { list-style: none; margin-top: 20px; }
+.footer-links a { color: #ccc; text-decoration: none; line-height: 2; }
+.bottom-footer { text-align: center; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .nav-links { display: none; }
+}
+
+:root {
+    --primary: #d11b3d; /* الأحمر الاحترافي */
+    --secondary: #1a2c4e; /* الكحلي العميق */
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background: var(--secondary);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.top-bar a { color: #cbd5e0; font-size: 0.85rem; text-decoration: none; margin-right: 20px; transition: 0.3s; }
+.top-bar a:hover { color: var(--primary); }
+.top-bar i { color: var(--primary); margin-right: 5px; }
+
+/* --- Navbar --- */
+.navbar {
+    background: var(--white);
+    padding: 10px 0;
+    position: sticky; top: 0; z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+/* Logo Adjustment */
+.logo { display: flex; align-items: center; gap: 15px; }
+.logo img { height: 60px; width: auto; object-fit: contain; }
+.logo-text { text-align: left; border-left: 2px solid #eee; padding-left: 15px; }
+.logo .abbr { display: block; font-weight: 900; font-size: 1.8rem; color: var(--secondary); line-height: 1; }
+.logo .full { display: block; font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; }
+
+/* Nav Links */
+.nav-links { display: flex; list-style: none; gap: 25px; }
+
+.nav-links a:hover, .nav-links a.active { color: var(--primary); border-bottom: 2px solid var(--primary); }
+
+/* CTA Button */
+.btn-cta {
+    background: var(--primary);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.4s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(209, 27, 61, 0.2);
+}
+.btn-cta:hover { background: var(--secondary); transform: translateY(-2px); }
+
+/* --- Hero Section --- */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(26, 44, 78, 0.85), rgba(26, 44, 78, 0.85)), 
+                url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=2000'); /* صورة احترافية */
+    background-size: cover;
+    background-position: center;
+    display: flex; align-items: center; color: white;
+}
+.hero-content { width: 70%; }
+.hero h4 { color: var(--primary); font-weight: 700; font-size: 1.2rem; margin-bottom: 15px; border-right: 4px solid var(--primary); padding-right: 15px; }
+.hero h1 { font-size: 4rem; font-weight: 900; line-height: 1.2; margin-bottom: 25px; }
+.hero p { font-size: 1.3rem; color: #e2e8f0; max-width: 600px; margin-bottom: 40px; }
+
+.hero-btns .btn { 
+    padding: 15px 40px; border-radius: 4px; font-weight: 800; 
+    text-decoration: none; display: inline-block; transition: 0.4s;
+}
+.hero-btns .primary { background: var(--primary); color: white; margin-left: 20px; }
+.hero-btns .secondary { border: 2px solid white; color: white; }
+.hero-btns .btn:hover { opacity: 0.9; transform: translateY(-5px); }
+
+/* Mobile */
+@media (max-width: 992px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.5rem; }
+    .logo .abbr { font-size: 1.4rem; }
+}
+
+/* --- الناف بار الأساسي (ديسكتوب) --- */
+.navbar {
+    background: var(--white);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر على الأطراف */
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* إخفاء أيقونة المنيو تماماً في الديسكتوب */
+.menu-btn {
+    display: none !important; 
+}
+
+/* اللوجو يميناً */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 1; /* أول عنصر يميناً في RTL */
+}
+
+/* الروابط في المنتصف */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    order: 2; /* العنصر الثاني */
+}
+
+
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+/* زر العرض يساراً */
+.nav-cta {
+    order: 3; /* آخر عنصر يساراً في RTL */
+}
+
+.btn-cta {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(209, 27, 61, 0.2);
+}
+
+/* --- تعديلات الموبايل (أقل من 992px) --- */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* إخفاء الروابط في الموبايل */
+    }
+    
+    .nav-cta {
+        display: none; /* إخفاء الزر في الموبايل أو نضعه داخل المنيو */
+    }
+
+    .menu-btn {
+        display: block !important; /* إظهار أيقونة التلات شرطات فقط في الموبايل */
+        font-size: 1.8rem;
+        color: var(--secondary);
+        cursor: pointer;
+        order: 3; /* تظهر في أقصى اليسار بجانب اللوجو */
+    }
+
+    /* القائمة الجانبية لما تفتح (اختياري لو عندك كود ليها) */
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* --- تعديلات الموبايل الشاملة --- */
+@media (max-width: 992px) {
+    .container { width: 92%; }
+
+    /* 1. التوب بار: تبسيط العناصر */
+    .top-bar .flex-between {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .top-bar .contact-info { justify-content: center; width: 100%; }
+    .top-bar a { margin: 0 10px; font-size: 0.75rem; }
+    .top-bar .social-icons { display: none; } /* إخفاء السوشيال في التوب بار لتوفير مساحة */
+
+    /* 2. الناف بار: اللوجو والمنيو */
+    .navbar { padding: 10px 0; }
+    .nav-container { justify-content: space-between; flex-direction: row-reverse; }
+    
+    .logo { gap: 8px; }
+    .logo img { height: 45px; }
+    .logo .abbr { font-size: 1.3rem; }
+    .logo .full { font-size: 0.6rem; }
+    .logo-text { padding-right: 8px; border-right: 1px solid #ddd; }
+
+    .menu-btn { display: block !important; order: 1; }
+
+    /* 3. الهيرو سكشن: تصغير الخطوط */
+    .hero {  padding: 120px 0 60px; text-align: center; }
+    .hero-content { width: 100%; }
+    .hero h1 { font-size: 2.2rem; line-height: 1.3; }
+    .hero p { font-size: 1rem; padding: 0 10px; }
+    
+    .hero-btns { flex-direction: column; gap: 15px; align-items: center; }
+    .hero-btns .btn { width: 90%; margin: 0; padding: 15px; }
+
+    /* 4. قسم "لماذا نحن": تحويل الشبكة لعمود واحد */
+    .why-us { padding: 60px 0; }
+    .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+    .sec-title { font-size: 1.8rem; text-align: center; }
+    .feature-item { text-align: center; flex-direction: column; align-items: center; }
+    .feature-item i { margin-bottom: 10px; font-size: 2.5rem; }
+
+    .about-img { margin-top: 30px; }
+    .stats-overlay { 
+        position: relative; 
+        bottom: 0; 
+        left: 0; 
+        margin: -30px auto 0; 
+        width: 80%; 
+        padding: 20px;
+    }
+
+    /* 5. الخدمات: جعل البطاقات تأخذ العرض الكامل */
+    .services { padding: 60px 0; }
+    .services-grid { grid-template-columns: 1fr; padding: 0 10px; }
+    .service-card { padding: 30px 20px; }
+
+    /* 6. الفوتر */
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .footer-info { display: flex; flex-direction: column; align-items: center; }
+}
+
+/* تعديلات إضافية للشاشات الصغيرة جداً (مثل آيفون SE) */
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.8rem; }
+    .logo .full { display: none; } /* إخفاء الاسم الكامل والاكتفاء بـ SSH في الشاشات الضيقة جداً */
+}
+
+@media (max-width: 992px) {
+    /* ضبط الحاوية لترك مسافة من جوانب الشاشة (حل مشكلة الخط الأحمر) */
+    .container { 
+        width: 100% !important; 
+        padding: 0 25px !important; /* مسافة أمان من اليمين واليسار */
+    }
+
+    /* الناف بار: إرجاع الترتيب الطبيعي (اللوجو يمين والمنيو يسار) */
+    .nav-container { 
+        display: flex !important;
+        flex-direction: row !important; /* الترتيب العادي لـ RTL */
+        justify-content: space-between !important; 
+        align-items: center;
+    }
+
+    .logo { order: 1; }
+    .menu-btn { order: 2; display: block !important; }
+
+    /* الهيرو سكشن */
+    .hero { padding: 130px 0 60px; }
+    .hero-content { width: 100%; text-align: right; } /* محاذاة لليمين */
+    
+    /* حل مشكلة الخط الأحمر الملتصق */
+    .hero h4 { 
+        margin-right: 2px; /* إزاحة بسيطة عن الحافة */
+        font-size: 1.1rem;
+    }
+
+    .hero h1 { font-size: 2.1rem; line-height: 1.4; }
+
+    /* حل مشكلة المسافة بين الأزرار */
+    .hero-btns { 
+        display: flex !important;
+        flex-direction: column !important; 
+        gap: 20px !important; /* مسافة واضحة بين الزرين */
+        margin-top: 30px;
+    }
+
+    .hero-btns .btn { 
+        width: 100% !important; 
+        margin: 0 !important; /* حذف أي مارجن قديم */
+        text-align: center;
+    }
+
+    /* تصحيح العداد في الموبايل */
+    .about-img { margin-top: 50px; }
+    .stats-overlay {
+        position: relative;
+        bottom: 0; left: 0;
+        margin: -40px auto 0;
+        width: 90%;
+        padding: 25px;
+    }
+}
