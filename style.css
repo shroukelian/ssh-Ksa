@@ -1,102 +1,472 @@
 :root {
-    --primary: #d11b3d; /* الأحمر الخاص بـ ASB */
-    --secondary: #1a2c4e; /* الكحلي الخاص بـ ASB */
+    --primary: #d11b3d;
+    /* الأحمر الخاص بـ ASB */
+    --secondary: #1a2c4e;
+    /* الكحلي الخاص بـ ASB */
     --white: #ffffff;
     --light-bg: #f8fafc;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-body { direction: rtl; text-align: right; color: var(--secondary); overflow-x: hidden; }
-.container { width: 88%; margin: auto; }
-.flex-between { display: flex; justify-content: space-between; align-items: center; }
-.highlight { color: var(--primary); }
-.text-center { text-align: center; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    color: var(--secondary);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 88%;
+    margin: auto;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.text-center {
+    text-align: center;
+}
 
 /* Top Bar */
-.top-bar { background: var(--secondary); padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.top-bar a { color: #e2e8f0; font-size: 0.85rem; text-decoration: none; margin-left: 20px; }
-.top-bar i { color: var(--primary); margin-left: 5px; }
-.social-icons a { color: white; margin-right: 15px; transition: 0.3s; }
-.social-icons a:hover { color: var(--primary); }
+.top-bar {
+    background: var(--secondary);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar a {
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.top-bar i {
+    color: var(--primary);
+    margin-left: 5px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+}
 
 /* Navbar */
-.navbar { background: var(--white); padding: 15px 0; position: sticky; top: 0; z-index: 2000; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { display: flex; align-items: center; gap: 15px; }
-.logo img { height: 55px; }
-.logo .abbr { display: block; font-weight: 900; font-size: 1.8rem; color: var(--secondary); line-height: 1; }
-.logo .full { font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; }
-.nav-links { display: flex; list-style: none; gap: 30px; }
-.nav-links a { text-decoration: none; color: var(--secondary); font-weight: 700; transition: 0.3s; }
-.nav-links a:hover { color: var(--primary); }
-.btn-cta { background: var(--primary); color: white !important; padding: 12px 25px; border-radius: 4px; font-weight: 800; text-decoration: none; transition: 0.3s; }
-.btn-cta:hover { background: var(--secondary); }
-.menu-btn { display: none; font-size: 1.8rem; cursor: pointer; color: var(--secondary); }
+.navbar {
+    background: var(--white);
+    padding: 15px 0;
+    position: static;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 55px;
+}
+
+.logo .abbr {
+    display: block;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--secondary);
+    line-height: 1;
+}
+
+.logo .full {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-cta {
+    background: var(--primary);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background: var(--secondary);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--secondary);
+}
 
 /* Hero */
-.hero { height: 85vh; background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e78b?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; display: flex; align-items: center; color: white; }
-.hero-content { width: 65%; }
-.hero h4 { color: var(--primary); font-weight: 700; margin-bottom: 15px; border-right: 4px solid var(--primary); padding-right: 15px; }
-.hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 25px; }
-.hero p { font-size: 1.2rem; color: #cbd5e0; margin-bottom: 40px; max-width: 600px; }
-.hero-btns .btn { padding: 15px 40px; border-radius: 4px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; margin-left: 15px; }
-.btn.primary { background: var(--primary); color: white; }
-.btn.secondary { border: 2px solid white; color: white; }
-.btn:hover { transform: translateY(-5px); }
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e78b?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    width: 65%;
+}
+
+.hero h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-right: 4px solid var(--primary);
+    padding-right: 15px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #cbd5e0;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.hero-btns .btn {
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    margin-left: 15px;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
 
 /* Pillars */
-.pillars { padding: 80px 0; background: var(--white); }
-.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
-.pillar-item .icon-circle { width: 120px; height: 120px; border: 3px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: var(--primary); transition: 0.4s; }
-.pillar-item:hover .icon-circle { background: var(--primary); color: white; }
+.pillars {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pillar-item .icon-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2.5rem;
+    color: var(--primary);
+    transition: 0.4s;
+}
+
+.pillar-item:hover .icon-circle {
+    background: var(--primary);
+    color: white;
+}
 
 /* Services Section */
-.services-bg { background: var(--light-bg); padding: 100px 0; }
-.sub-head { color: var(--primary); font-weight: 700; margin-bottom: 10px; }
-.sec-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 40px; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-.service-box { background: white; padding: 50px 30px; border-radius: 8px; transition: 0.4s; position: relative; overflow: hidden; border-bottom: 4px solid transparent; }
-.service-box i { font-size: 3rem; color: var(--primary); margin-bottom: 25px; display: block; }
-.service-box h3 { margin-bottom: 15px; font-weight: 800; }
-.service-box p { color: #64748b; line-height: 1.7; }
-.service-box:hover { transform: translateY(-15px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+.services-bg {
+    background: var(--light-bg);
+    padding: 100px 0;
+}
+
+.sub-head {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sec-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-box {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 8px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid transparent;
+}
+
+.service-box i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    display: block;
+}
+
+.service-box h3 {
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.service-box p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.service-box:hover {
+    transform: translateY(-15px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
 
 /* Why SSH */
-.why-ssh { padding: 100px 0; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
-.why-img img { width: 100%; border-radius: 4px; box-shadow: -20px 20px 0 var(--primary); }
-.why-item { display: flex; gap: 20px; margin-bottom: 30px; }
-.why-item i { font-size: 2rem; color: var(--primary); }
-.counters { display: flex; gap: 40px; margin-top: 40px; }
-.counter-box h3 { font-size: 2.5rem; font-weight: 900; color: var(--secondary); }
+.why-ssh {
+    padding: 100px 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.why-img img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: -20px 20px 0 var(--primary);
+}
+
+.why-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.why-item i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.counters {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.counter-box h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--secondary);
+}
 
 /* Footer */
-footer { background: var(--secondary); color: white; padding: 80px 0 0; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; padding-bottom: 50px; }
-.footer-info .social-f { margin-top: 25px; display: flex; gap: 15px; }
-.social-f a { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
-.f-location h3, .f-contact h3 { color: white; margin-bottom: 25px; font-weight: 800; }
-.footer-grid p { color: #94a3b8; margin-bottom: 10px; }
-.copy { background: #0f172a; padding: 25px 0; text-align: center; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 80px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-info .social-f {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-f a {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.f-location h3,
+.f-contact h3 {
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.footer-grid p {
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.copy {
+    background: #0f172a;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
 
 /* Mobile Menu */
 @media (max-width: 992px) {
-    .nav-links, .nav-cta { display: none; }
-    .menu-btn { display: block; }
-    .hero-content { width: 100%; text-align: center; }
-    .hero h1 { font-size: 2.2rem; }
-    .hero h4 { border-right: none; padding-right: 0; }
-    .grid-2 { grid-template-columns: 1fr; }
-    .why-img { order: 2; }
-    .pillars-grid { grid-template-columns: 1fr; }
+
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h4 {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .why-img {
+        order: 2;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .nav-links.active {
-    display: flex !important; position: fixed; top: 0; right: 0; width: 80%; height: 100vh; background: var(--secondary); flex-direction: column; justify-content: center; align-items: center; z-index: 5000;
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background: var(--secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
 }
-.nav-links.active a { color: white; font-size: 1.5rem; }
 
-.whatsapp-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2.2rem; z-index: 3000; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
+.nav-links.active a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #25d366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    z-index: 3000;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
 
 
 /* --- Clients Section Styling --- */
@@ -130,22 +500,28 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
     overflow-x: auto;
     padding: 40px 10px;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* إخفاء السكرول بار */
+    scrollbar-width: none;
+    /* إخفاء السكرول بار */
 }
-.clients-container::-webkit-scrollbar { display: none; }
+
+.clients-container::-webkit-scrollbar {
+    display: none;
+}
 
 /* تصميم الشكل المعين (Diamond) */
 .client-diamond {
     min-width: 180px;
     height: 180px;
     background: #fff;
-    transform: rotate(45deg); /* تدوير المربع ليصبح معين */
+    transform: rotate(45deg);
+    /* تدوير المربع ليصبح معين */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     border: 1px solid #f0f0f0;
-    margin: 30px; /* مسافة بسبب التدوير */
+    margin: 30px;
+    /* مسافة بسبب التدوير */
     transition: 0.4s;
     cursor: pointer;
 }
@@ -153,11 +529,12 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 .client-diamond:hover {
     transform: rotate(45deg) scale(1.1);
     border-color: var(--primary);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .diamond-content {
-    transform: rotate(-45deg); /* إرجاع المحتوى (اللوجو) للوضع العدل */
+    transform: rotate(-45deg);
+    /* إرجاع المحتوى (اللوجو) للوضع العدل */
     width: 100px;
     height: 100px;
     display: flex;
@@ -168,7 +545,8 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 .diamond-content img {
     max-width: 100%;
     max-height: 100%;
-    filter: grayscale(100%); /* جعل اللوجوهات أبيض وأسود مثل الموقع المرجعي */
+    filter: grayscale(100%);
+    /* جعل اللوجوهات أبيض وأسود مثل الموقع المرجعي */
     opacity: 0.7;
     transition: 0.3s;
 }
@@ -189,7 +567,10 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
     transition: 0.3s;
     z-index: 10;
 }
-.client-arrow:hover { color: var(--primary); }
+
+.client-arrow:hover {
+    color: var(--primary);
+}
 
 /* التجاوب مع الموبايل */
 @media (max-width: 768px) {
@@ -197,10 +578,16 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
         min-width: 130px;
         height: 130px;
     }
+
     .diamond-content {
         width: 70px;
     }
-    .client-arrow { display: none; } /* إخفاء الأسهم في الموبايل والاعتماد على السكرول باللمس */
+
+    .client-arrow {
+        display: none;
+    }
+
+    /* إخفاء الأسهم في الموبايل والاعتماد على السكرول باللمس */
 }
 
 
@@ -216,11 +603,15 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 /* السلايد الواحد */
 .hero-slide {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    opacity: 0; /* مخفي افتراضياً */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* مخفي افتراضياً */
     visibility: hidden;
-    transition: opacity 1.5s ease-in-out; /* حركة التلاشي */
+    transition: opacity 1.5s ease-in-out;
+    /* حركة التلاشي */
     display: flex;
     align-items: center;
     z-index: 1;
@@ -235,8 +626,10 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 /* خلفية الصورة */
 .slide-bg {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
@@ -253,7 +646,8 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 /* النقاط الجانبية (Dots) */
 .slider-dots {
     position: absolute;
-    left: 30px; /* في الجانب الأيسر مثل ASB */
+    left: 30px;
+    /* في الجانب الأيسر مثل ASB */
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -263,15 +657,17 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 }
 
 .dot {
-    width: 12px; height: 12px;
-    background: rgba(255,255,255,0.3);
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .dot.active {
-    background: var(--primary); /* اللون الأحمر */
+    background: var(--primary);
+    /* اللون الأحمر */
     transform: scale(1.3);
 }
 
@@ -279,23 +675,33 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
 .hero-slide.active h1 {
     animation: fadeInUp 1s both 0.5s;
 }
+
 .hero-slide.active .sub-heading {
     animation: fadeInRight 1s both;
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
 /* حاوية السلايدر الرئيسية */
 .hero-slider-wrapper {
     position: relative;
-    height: 90vh; /* طول الشاشة */
+    height: 90vh;
+    /* طول الشاشة */
     width: 100%;
     overflow: hidden;
-    background-color: #1a2c4e; /* لون كحلي كخلفية احتياطية بدلاً من الأسود */
+    background-color: #1a2c4e;
+    /* لون كحلي كخلفية احتياطية بدلاً من الأسود */
 }
 
 /* السلايد الواحد */
@@ -327,8 +733,10 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* تجعل الصورة تملأ المساحة */
-    z-index: -2; /* تكون تحت كل حاوية السلايد */
+    object-fit: cover;
+    /* تجعل الصورة تملأ المساحة */
+    z-index: -2;
+    /* تكون تحت كل حاوية السلايد */
 }
 
 /* طبقة التغطية الشفافة (Overlay) */
@@ -338,8 +746,10 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.6); /* شفافية سودة خفيفة مش سادة */
-    z-index: -1; /* فوق الصورة وتحت الكلام */
+    background: rgba(15, 23, 42, 0.6);
+    /* شفافية سودة خفيفة مش سادة */
+    z-index: -1;
+    /* فوق الصورة وتحت الكلام */
 }
 
 /* النصوص - تأكد من اللون الأبيض والـ z-index */
@@ -349,48 +759,61 @@ footer { background: var(--secondary); color: white; padding: 80px 0 0; }
     width: 85%;
     margin: auto;
     text-align: right;
-    color: #ffffff; /* لون أبيض صريح */
+    color: #ffffff;
+    /* لون أبيض صريح */
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit; 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; 
+    padding: 0 15px;
 }
+
 /* --- تعديلات الجوال الاحترافية --- */
 @media (max-width: 768px) {
+
     /* 1. ضبط التوب بار ليكون في خط واحد */
     .top-bar {
         padding: 5px 0;
     }
+
     .top-bar .container {
         display: flex !important;
-        flex-direction: row !important; /* إجبارهم على البقاء في سطر واحد */
+        flex-direction: row !important;
+        /* إجبارهم على البقاء في سطر واحد */
         justify-content: center !important;
-        flex-wrap: nowrap !important; 
+        flex-wrap: nowrap !important;
         gap: 8px;
     }
+
     .top-bar a {
-        font-size: 0.65rem !important; /* تصغير الخط ليناسب الشاشة */
+        font-size: 0.65rem !important;
+        /* تصغير الخط ليناسب الشاشة */
         margin: 0 !important;
-        white-space: nowrap; /* منع النص من النزول لسطر جديد */
+        white-space: nowrap;
+        /* منع النص من النزول لسطر جديد */
     }
+
     .top-bar i {
         margin-left: 2px !important;
     }
+
     /* إخفاء أيقونات السوشيال ميديا في التوب بار للجوال فقط لتوفير مساحة */
     .top-bar .social-icons {
         display: none !important;
@@ -398,18 +821,24 @@ html, body {
 
     /* 2. ضبط الهيرو سكشن ومحاذاة النصوص */
     .hero-slider-wrapper {
-        height: 100vh; /* ملء الشاشة */
+        height: 100vh;
+        /* ملء الشاشة */
     }
+
     .hero-content {
         width: 90% !important;
-        text-align: center !important; /* توسيط الكلام في الجوال أجمل */
+        text-align: center !important;
+        /* توسيط الكلام في الجوال أجمل */
         padding: 0 10px;
     }
+
     .sub-heading {
         justify-content: center !important;
     }
+
     .hero-content h1 {
-        font-size: 2rem !important; /* حجم مناسب للجوال */
+        font-size: 2rem !important;
+        /* حجم مناسب للجوال */
         line-height: 1.3;
     }
 
@@ -417,9 +846,11 @@ html, body {
     .hero-btns {
         display: flex !important;
         flex-direction: column !important;
-        gap: 15px !important; /* مسافة عمودية بين الزرين */
+        gap: 15px !important;
+        /* مسافة عمودية بين الزرين */
         margin-top: 25px;
     }
+
     .hero-btns .btn {
         width: 100% !important;
         margin: 0 !important;
@@ -431,16 +862,19 @@ html, body {
         left: 10px !important;
         gap: 10px;
     }
-    
+
     /* 5. ضبط اللوجو في الموبايل */
     .logo img {
         height: 40px !important;
     }
+
     .logo .abbr {
         font-size: 1.2rem !important;
     }
+
     .logo .full {
-        display: none; /* إخفاء الاسم الطويل في الهيدر للجوال */
+        display: none;
+        /* إخفاء الاسم الطويل في الهيدر للجوال */
     }
 }
 
@@ -449,32 +883,113 @@ html, body {
     .footer-grid {
         display: flex;
         flex-direction: column;
-        align-items: center; /* توسيط العناصر عرضياً */
-        text-align: center;  /* توسيط النصوص */
+        align-items: center;
+        /* توسيط العناصر عرضياً */
+        text-align: center;
+        /* توسيط النصوص */
         gap: 40px;
     }
 
-    .f-about, .f-location, .f-contact {
+    .f-about,
+    .f-location,
+    .f-contact {
         display: flex;
         flex-direction: column;
-        align-items: center; /* لضمان توسيط محتوى كل عمود */
+        align-items: center;
+        /* لضمان توسيط محتوى كل عمود */
         width: 100%;
     }
 
     .social-f {
-        justify-content: center; /* توسيط أيقونات السوشيال ميديا */
+        justify-content: center;
+        /* توسيط أيقونات السوشيال ميديا */
         margin-top: 15px;
     }
 
     /* إذا كان هناك خط تحت العناوين يحتاج للتوسيط */
-    .f-location h3::after, .f-contact h3::after {
+    .f-location h3::after,
+    .f-contact h3::after {
         left: 50% !important;
         right: auto !important;
         transform: translateX(-50%);
     }
 
-    .f-location p i, .f-contact p i {
+    .f-location p i,
+    .f-contact p i {
         margin-left: 5px;
         margin-right: 0;
     }
+}
+
+/* --- ضبط سلايدر العملاء للموبايل --- */
+@media (max-width: 768px) {
+    .clients-section {
+        padding: 60px 0;
+    }
+
+    /* 1. توسيط النصوص والخط الأحمر */
+    .clients-section .section-head {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .red-line-short {
+        margin: 0 !important;
+        /* إلغاء المارجن الجانبي */
+        width: 50px;
+    }
+
+    /* 2. ضبط الحاوية لتسمح بالتمرير السلس أو التراص */
+    .clients-wrapper {
+        margin-top: 40px;
+    }
+
+    .clients-container {
+        display: flex;
+        justify-content: center;
+        /* توسيط المعينات */
+        flex-wrap: wrap;
+        /* جعلهم ينزلوا تحت بعض لو المساحة ضيقة */
+        gap: 10px;
+        /* تقليل المسافات */
+        padding: 20px 0;
+    }
+
+    /* 3. تصغير حجم المعينات (الألماس) لتناسب الموبايل */
+    .client-diamond {
+        min-width: 100px !important;
+        /* تصغير العرض */
+        height: 100px !important;
+        /* تصغير الطول */
+        margin: 15px !important;
+        /* تقليل الهامش لتقريبهم من بعض */
+        transform: rotate(45deg);
+        /* الحفاظ على الدوران */
+    }
+
+    /* 4. تصغير اللوجو داخل المعين */
+    .diamond-content {
+        width: 60px !important;
+        height: 60px !important;
+        transform: rotate(-45deg);
+        /* الحفاظ على وضع اللوجو العدل */
+    }
+
+    .diamond-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
