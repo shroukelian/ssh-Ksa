@@ -46,3 +46,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// تشغيل سلايدر العملاء
+const container = document.querySelector('.clients-container');
+const nextBtn = document.querySelector('.client-arrow.next');
+const prevBtn = document.querySelector('.client-arrow.prev');
+
+if(container && nextBtn && prevBtn) {
+    nextBtn.addEventListener('click', () => {
+        container.scrollLeft -= 250; // السكرول لليسار (RTL)
+    });
+
+    prevBtn.addEventListener('click', () => {
+        container.scrollLeft += 250; // السكرول لليمين (RTL)
+    });
+}
+
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlides(index) {
+    // إزالة الحالة النشطة من الجميع
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // ضبط الاندكس
+    if (index >= slides.length) currentSlideIndex = 0;
+    if (index < 0) currentSlideIndex = slides.length - 1;
+
+    // تفعيل السلايد والنقطة الحالية
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+// التغيير التلقائي كل 5 ثوانٍ
+let slideInterval = setInterval(() => {
+    currentSlideIndex++;
+    showSlides(currentSlideIndex);
+}, 5000);
+
+// دالة التحكم اليدوي بالنقاط
+function currentSlide(index) {
+    clearInterval(slideInterval); // إيقاف المؤقت عند الضغط اليدوي
+    currentSlideIndex = index;
+    showSlides(currentSlideIndex);
+    // إعادة تشغيل المؤقت
+    slideInterval = setInterval(() => {
+        currentSlideIndex++;
+        showSlides(currentSlideIndex);
+    }, 5000);
+}
