@@ -370,3 +370,111 @@ html, body {
     margin: 0 auto;
     padding: 0 15px; 
 }
+/* --- تعديلات الجوال الاحترافية --- */
+@media (max-width: 768px) {
+    /* 1. ضبط التوب بار ليكون في خط واحد */
+    .top-bar {
+        padding: 5px 0;
+    }
+    .top-bar .container {
+        display: flex !important;
+        flex-direction: row !important; /* إجبارهم على البقاء في سطر واحد */
+        justify-content: center !important;
+        flex-wrap: nowrap !important; 
+        gap: 8px;
+    }
+    .top-bar a {
+        font-size: 0.65rem !important; /* تصغير الخط ليناسب الشاشة */
+        margin: 0 !important;
+        white-space: nowrap; /* منع النص من النزول لسطر جديد */
+    }
+    .top-bar i {
+        margin-left: 2px !important;
+    }
+    /* إخفاء أيقونات السوشيال ميديا في التوب بار للجوال فقط لتوفير مساحة */
+    .top-bar .social-icons {
+        display: none !important;
+    }
+
+    /* 2. ضبط الهيرو سكشن ومحاذاة النصوص */
+    .hero-slider-wrapper {
+        height: 100vh; /* ملء الشاشة */
+    }
+    .hero-content {
+        width: 90% !important;
+        text-align: center !important; /* توسيط الكلام في الجوال أجمل */
+        padding: 0 10px;
+    }
+    .sub-heading {
+        justify-content: center !important;
+    }
+    .hero-content h1 {
+        font-size: 2rem !important; /* حجم مناسب للجوال */
+        line-height: 1.3;
+    }
+
+    /* 3. إضافة مسافة بين الأزرار */
+    .hero-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important; /* مسافة عمودية بين الزرين */
+        margin-top: 25px;
+    }
+    .hero-btns .btn {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 12px !important;
+    }
+
+    /* 4. إبعاد نقاط السلايدر عن النص */
+    .slider-dots {
+        left: 10px !important;
+        gap: 10px;
+    }
+    
+    /* 5. ضبط اللوجو في الموبايل */
+    .logo img {
+        height: 40px !important;
+    }
+    .logo .abbr {
+        font-size: 1.2rem !important;
+    }
+    .logo .full {
+        display: none; /* إخفاء الاسم الطويل في الهيدر للجوال */
+    }
+}
+
+/* --- توسيط محتوى الفوتر في الموبايل --- */
+@media (max-width: 992px) {
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط العناصر عرضياً */
+        text-align: center;  /* توسيط النصوص */
+        gap: 40px;
+    }
+
+    .f-about, .f-location, .f-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* لضمان توسيط محتوى كل عمود */
+        width: 100%;
+    }
+
+    .social-f {
+        justify-content: center; /* توسيط أيقونات السوشيال ميديا */
+        margin-top: 15px;
+    }
+
+    /* إذا كان هناك خط تحت العناوين يحتاج للتوسيط */
+    .f-location h3::after, .f-contact h3::after {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%);
+    }
+
+    .f-location p i, .f-contact p i {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+}
