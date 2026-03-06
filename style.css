@@ -993,3 +993,793 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+
+
+/* --- قسم التعريف بالمؤسسة --- */
+.company-intro {
+    padding: 100px 0 60px;
+    background-color: #fff;
+}
+
+.intro-header {
+    margin-bottom: 50px;
+}
+
+.sub-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.sub-label .red-line {
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary); /* اللون الأحمر */
+}
+
+.main-intro-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--secondary); /* الكحلي */
+}
+
+.highlight-blue {
+    color: var(--secondary);
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-red {
+    color: var(--primary);
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    line-height: 2.1;
+    color: #334155;
+    margin-bottom: 30px;
+    font-weight: 600;
+    max-width: 90%;
+}
+
+.cta-text {
+    font-weight: 900 !important;
+    font-size: 1.3rem !important;
+    color: #1e293b !important;
+}
+
+.cta-text a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+    border-bottom: 2px dashed transparent;
+}
+
+.cta-text a:hover {
+    border-bottom-color: var(--primary);
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .main-intro-title {
+        font-size: 2.2rem;
+    }
+    .intro-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    .company-intro {
+        padding: 60px 20px;
+    }
+}
+
+/* تحسينات النص الجديد */
+.company-intro {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.intro-content p {
+    font-size: 1.15rem;
+    line-height: 2.2;
+    color: #2d3748;
+    margin-bottom: 25px;
+    text-align: justify; /* ليكون النص منسقاً كالمجلات الاحترافية */
+}
+
+.intro-content strong {
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+/* صندوق تمييز رؤية 2030 */
+.vision-2030-box {
+    background: #f8fafc;
+    border-right: 5px solid var(--primary);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.vision-2030-box p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.cta-text-large {
+    font-size: 1.4rem !important;
+    color: var(--secondary) !important;
+    font-weight: 900 !important;
+    margin-top: 40px;
+}
+
+.cta-btn-link {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff !important;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.cta-btn-link:hover {
+    background: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+    .intro-content p {
+        text-align: right;
+        font-size: 1rem;
+    }
+    .vision-2030-box {
+        padding: 20px;
+    }
+}
+
+/* --- تنسيق الفوتر الاحترافي --- */
+.main-footer {
+    background-color: #1a2c4e; /* لون كحلي غامق مثل ASB */
+    color: #ffffff;
+    padding: 80px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr; /* تقسيم الأعمدة */
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* العناوين الصغيرة فوق العناوين الرئيسية */
+.f-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #cbd5e0;
+    margin-bottom: 15px;
+}
+
+.f-red-line {
+    width: 35px;
+    height: 2px;
+    background-color: #d11b3d;
+}
+
+.f-title-red {
+    color: #d11b3d;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+/* قائمة الاتصال */
+.f-contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.f-contact-list li {
+    margin-bottom: 15px;
+    text-align: left; /* لتبقى الأرقام والرموز منضبطة */
+}
+
+.f-contact-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* لضبط الاتجاه في RTL */
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.f-contact-list a:hover {
+    color: #d11b3d;
+}
+
+.f-contact-list i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* قسم الخريطة والمواقع */
+.map-bg-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.f-map-dots {
+    width: 100%;
+    max-width: 400px;
+    opacity: 0.2; /* خريطة باهتة في الخلفية */
+    margin-bottom: 20px;
+}
+
+.location-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+.location-details i {
+    color: #d11b3d;
+    margin-left: 8px;
+}
+
+.country-name {
+    font-weight: 800;
+    color: #fff !important;
+    margin-top: 15px;
+}
+
+/* أيقونات السوشيال ميديا (الدوائر الحمراء) */
+.f-social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.s-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #d11b3d;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.s-icon:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    color: #d11b3d;
+}
+
+/* شريط الحقوق السفلي */
+.footer-bottom-bar {
+    background-color: #13213a;
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-bottom-bar p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+    .f-head { justify-content: center; }
+    .f-contact-list a { justify-content: center; }
+    .f-social-icons { justify-content: center; }
+}
+
+/* --- نسخة الفوتر الملمومة والأنيقة --- */
+.main-footer {
+    background-color: #1a2c4e;
+    color: #ffffff;
+    padding: 40px 0 0; /* قللنا المسافة اللي فوق من 80 لـ 40 */
+    position: relative;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr; /* ظبطنا النسب */
+    gap: 20px; /* قللنا الفراغ بين الأعمدة */
+    padding-bottom: 30px; /* قللنا المسافة اللي تحت */
+}
+
+/* العناوين الصغيرة */
+.f-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem; /* صغرنا الخط */
+    color: #cbd5e0;
+    margin-bottom: 8px; /* قللنا المسافة */
+}
+
+.f-red-line {
+    width: 25px; /* قصرنا الخط */
+    height: 2px;
+    background-color: #d11b3d;
+}
+
+/* العناوين الحمراء الكبيرة */
+.f-title-red {
+    color: #d11b3d;
+    font-size: 1.3rem; /* صغرنا الحجم من 1.8 لـ 1.3 */
+    font-weight: 800;
+    margin-bottom: 15px; /* قللنا المسافة تحت العنوان */
+}
+
+/* قائمة الاتصال */
+.f-contact-list li {
+    margin-bottom: 8px; /* قللنا المسافة بين السطور */
+}
+
+.f-contact-list a {
+    font-size: 0.95rem; /* صغرنا الخط شوية */
+    gap: 10px;
+}
+
+/* قسم الخريطة والمواقع */
+.f-map-dots {
+    max-width: 280px; /* صغرنا الخريطة عشان ماتاخدش طول */
+    opacity: 0.15;
+    margin-bottom: 10px;
+}
+
+.location-details p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* أيقونات السوشيال ميديا */
+.s-icon {
+    width: 35px; /* صغرنا الدواير من 45 لـ 35 */
+    height: 35px;
+    font-size: 1rem;
+}
+
+/* شريط الحقوق السفلي */
+.footer-bottom-bar {
+    padding: 15px 0; /* قللنا سمك الشريط الأسود اللي تحت */
+}
+
+.footer-bottom-bar p {
+    font-size: 0.75rem;
+}
+
+/* تحسين للموبايل عشان ميبقاش طويل بزيادة */
+@media (max-width: 992px) {
+    .footer-grid {
+        gap: 30px;
+        padding-bottom: 40px;
+    }
+    .f-title-red {
+        margin-bottom: 15px;
+    }
+}
+/* --- تنسيق قسم السوشيال ميديا في التوب بار --- */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* المسافة بين الأيقونات */
+}
+
+/* تنسيق النص */
+.social-label {
+    color: #e9d02d; /* لون نص رمادي غامق */
+    font-size: 0.9rem;
+    font-family: sans-serif; /* الخط الإنجليزي */
+    margin-left: 10px; /* مسافة بسيطة قبل الأيقونات */
+    font-weight: 500;
+}
+
+/* تنسيق الأيقونات */
+.social-icons a i {
+    color: #d11b3d; /* اللون الأحمر النبيتي الموجود في الصورة */
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس */
+.social-icons a:hover i {
+    color: var(--secondary); /* يتغير لونه للكحلي عند الوقوف عليه */
+    transform: translateY(-2px);
+}
+
+/* إخفاء النص في الشاشات الصغيرة جداً لتوفير مساحة */
+@media (max-width: 480px) {
+    .social-label {
+        display: none;
+    }
+}
+
+/* --- Contact Page Specific Styles --- */
+
+/* بنر عنوان الصفحة */
+.page-banner {
+    background: linear-gradient(rgba(26, 44, 78, 0.9), rgba(26, 44, 78, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 60px;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-weight: 600;
+    color: #cbd5e0;
+}
+
+.page-banner a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* قسم التواصل Get in touch */
+.contact-full-area {
+    padding-bottom: 100px;
+}
+
+.contact-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+/* Sidebar Info */
+.contact-sidebar {
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.icon-box {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.text-box h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.text-box p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+/* Form Styles */
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form-container input, 
+.contact-form-container textarea {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(209, 27, 61, 0.1);
+}
+
+.submit-btn-contact {
+    background: var(--primary);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    width: fit-content;
+}
+
+.submit-btn-contact:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* Map */
+.map-frame {
+    line-height: 0;
+    filter: grayscale(100%) invert(90%) contrast(90%); /* حركة اختيارية لجعل الخريطة متماشية مع ألوان الموقع */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .submit-btn-contact {
+        width: 100%;
+    }
+}
+
+/* تنسيقات صفحة المدونة */
+.blog-list-area { padding: 80px 0; background: #f9fafb; }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.blog-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.blog-card:hover { transform: translateY(-10px); }
+.blog-img img { width: 100%; height: 230px; object-fit: cover; }
+.blog-info { padding: 25px; }
+.blog-info h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; color: var(--secondary); line-height: 1.4; }
+.blog-info p { color: #64748b; font-size: 0.95rem; margin-bottom: 20px; height: 60px; overflow: hidden; }
+.read-more { color: var(--primary); font-weight: 800; text-decoration: none; }
+
+/* تنسيقات المقال التفصيلي */
+.post-detail-container { padding: 120px 0 80px; }
+.detail-title { font-size: 2.8rem; font-weight: 900; color: var(--secondary); margin-bottom: 20px; line-height: 1.2; }
+.post-meta { margin-bottom: 40px; color: #94a3b8; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.content-body p { font-size: 1.15rem; line-height: 2; color: #334155; margin-bottom: 25px; text-align: justify; }
+.content-body h3 { font-size: 1.7rem; color: var(--secondary); margin: 40px 0 20px; font-weight: 800; }
+.content-body ul { margin-right: 25px; margin-bottom: 30px; }
+.content-body li { margin-bottom: 12px; font-size: 1.1rem; color: #475569; }
+
+.advice-box { 
+    background: #fff5f6; 
+    border-right: 6px solid var(--primary); 
+    padding: 30px; 
+    margin: 40px 0; 
+    border-radius: 5px; 
+}
+.advice-box h4 { color: var(--primary); font-weight: 900; margin-bottom: 10px; }
+
+/* --- Blog Details Page Styling --- */
+.blog-detail-section {
+    padding: 120px 0 80px;
+    background: #fff;
+}
+
+.featured-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--secondary);
+    line-height: 1.3;
+}
+
+.post-meta {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.post-meta span { margin-left: 20px; }
+
+.post-body-content p {
+    font-size: 1.15rem;
+    line-height: 2.1;
+    color: #334155;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.post-body-content h3 {
+    font-size: 1.6rem;
+    color: var(--secondary);
+    margin: 40px 0 20px;
+    font-weight: 800;
+}
+
+.post-body-content ul, .post-body-content ol {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.post-body-content li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+/* صندوق النصيحة Advice Box (ستايل ASB) */
+.advice-box {
+    background: #fffafa;
+    border-right: 6px solid var(--primary);
+    padding: 25px 30px;
+    margin: 40px 0;
+    border-radius: 4px;
+}
+
+.advice-box h4 {
+    color: var(--primary);
+    font-weight: 900;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* نموذج التعليقات */
+.comment-section-area {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.comment-form-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.comment-form-custom input, .comment-form-custom textarea {
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: #f8fafc;
+    outline: none;
+}
+
+.comment-form-custom .input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn-red-blog {
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 800;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-red-blog:hover { background: var(--secondary); }
+
+/* الموبايل */
+@media (max-width: 768px) {
+    .featured-image { height: 250px; }
+    .post-title { font-size: 1.8rem; }
+    .comment-form-custom .input-grid { grid-template-columns: 1fr; }
+}
+/* --- ضبط الفوتر للموبايل بشكل احترافي --- */
+@media (max-width: 992px) {
+    .main-footer {
+        padding: 40px 0 0;
+        text-align: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* جعل الأعمدة فوق بعضها */
+        gap: 40px; /* مسافة بين كل قسم والثاني */
+        padding: 0 20px 40px;
+    }
+
+    /* توسيط العناوين والخطوط الحمراء */
+    .f-head {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .f-title-red {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    /* ضبط قائمة الاتصال */
+    .f-contact-list a {
+        justify-content: center; /* توسيط الأرقام والإيميلات */
+        flex-direction: row-reverse; /* لضمان ظهور الأيقونة بجانب النص صح */
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    .f-contact-list li {
+        text-align: center;
+    }
+
+    /* ضبط الخريطة والمواقع */
+    .map-bg-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .f-map-dots {
+        max-width: 250px; /* تصغير الخريطة في الموبايل */
+        margin-bottom: 15px;
+    }
+
+    .location-details p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* توسيط أيقونات السوشيال ميديا */
+    .f-social-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .s-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* شريط الحقوق السفلي */
+    .footer-bottom-bar {
+        padding: 20px 0;
+    }
+
+    .footer-bottom-bar p {
+        font-size: 0.8rem;
+    }
+}

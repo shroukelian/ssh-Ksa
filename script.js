@@ -61,39 +61,42 @@ if(container && nextBtn && prevBtn) {
         container.scrollLeft += 250; // السكرول لليمين (RTL)
     });
 }
-
 let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.dot');
 
 function showSlides(index) {
-    // إزالة الحالة النشطة من الجميع
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    if (slides.length === 0) return;
+
+    // إعادة ضبط الاندكس إذا تجاوز العدد
+    if (index >= slides.length) currentSlideIndex = 0;
+    else if (index < 0) currentSlideIndex = slides.length - 1;
+    else currentSlideIndex = index;
+
+    // إخفاء الكل وتفعيل الحالي
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
 
-    // ضبط الاندكس
-    if (index >= slides.length) currentSlideIndex = 0;
-    if (index < 0) currentSlideIndex = slides.length - 1;
-
-    // تفعيل السلايد والنقطة الحالية
     slides[currentSlideIndex].classList.add('active');
     dots[currentSlideIndex].classList.add('active');
 }
 
-// التغيير التلقائي كل 5 ثوانٍ
-let slideInterval = setInterval(() => {
-    currentSlideIndex++;
-    showSlides(currentSlideIndex);
-}, 5000);
-
-// دالة التحكم اليدوي بالنقاط
+// دالة التنقل اليدوي من خلال النقط
 function currentSlide(index) {
-    clearInterval(slideInterval); // إيقاف المؤقت عند الضغط اليدوي
-    currentSlideIndex = index;
-    showSlides(currentSlideIndex);
-    // إعادة تشغيل المؤقت
+    clearInterval(slideInterval); // إيقاف التلقائي مؤقتاً
+    showSlides(index);
+    startAutoSlide(); // إعادة تشغيل التلقائي
+}
+
+// تشغيل السلايدر تلقائياً
+let slideInterval;
+function startAutoSlide() {
     slideInterval = setInterval(() => {
-        currentSlideIndex++;
-        showSlides(currentSlideIndex);
+        showSlides(currentSlideIndex + 1);
     }, 5000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    startAutoSlide();
+});
