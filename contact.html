@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <!-- Main Style (استخدام نفس ملف التصميم الأساسي) -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="contact-page-body">
 
     <!-- Navbar (نفس الهيدر الخاص بالرئيسية) -->
@@ -45,127 +47,127 @@
         </div>
     </div>
 
-    <!-- Contact Section (Get in touch) -->
-    <section class="contact-full-area">
-        <div class="container">
-            <div class="section-head text-center">
-                <p class="sub-head">CONTACT US WITH EASE <span class="red-line-short"></span></p>
-                <h2 class="contact-main-title">Get in <span class="highlight">touch</span></h2>
-                <p class="contact-desc">يسعدنا دائماً تواصلكم معنا، فريقنا جاهز للرد على استفساراتكم وتقديم الحلول الإستراتيجية المناسبة لأعمالكم.</p>
+    <section class="contact-section-asb">
+        <div class="container contact-grid-asb">
+
+            <!-- الجزء الأيمن: نموذج المراسلة (Form) -->
+            <div class="contact-form-side">
+                <div class="head-asb">
+                    <p class="sub-label">نحن هنا لدعمك —</p>
+                    <h2>تواصل <span class="text-red">معنا</span></h2>
+                    <p class="desc">إذا كان لديك سؤال أو تحتاج إلى استشارة محاسبية، فلا تتردد في التواصل معنا — فريقنا
+                        المتخصص جاهز لتقديم الدعم.</p>
+                </div>
+
+                <form class="asb-form-actual">
+                    <div class="input-row">
+                        <input type="text" placeholder="* إسمك" required>
+                    </div>
+                    <div class="input-row">
+                        <input type="email" placeholder="* الإيميل الخاص بك" required>
+                    </div>
+                    <div class="input-row">
+                        <input type="text" placeholder="الموضوع">
+                    </div>
+                    <div class="input-row">
+                        <textarea placeholder="* اكتب رسالتك" rows="5" required></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn-asb-red">إرسال</button>
+                    </div>
+                </form>
             </div>
 
-            <div class="contact-grid-wrapper">
-                <!-- الجزء الأيمن: بيانات التواصل -->
-                <div class="contact-sidebar" data-aos="fade-right">
-                    
+            <!-- الجزء الأيسر: مكاتبنا -->
+            <div class="contact-info-side">
+                <div class="head-asb">
+                    <p class="sub-label">جاهزون دائماً لدعمك —</p>
+                    <h2>مكاتبنا</h2>
+                    <p class="desc">مكاتبنا مفتوحة لاستقبالك فنحن يسعدنا لقاؤك ومساعدتك عن قرب.</p>
+                </div>
+
+                <div class="info-blocks-vertical">
                     <!-- العنوان -->
-                    <div class="contact-item">
-                        <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
-                        <div class="text-box">
-                            <h3>مواقعنا</h3>
-                            <p><strong>جدة:</strong> حي الشاطئ - طريق فرع الكورنيش</p>
-                            <p><strong>الرياض:</strong> حي المناخ</p>
+                    <div class="info-group-item">
+                        <div class="icon-red-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-content">
+                            <h3>العنوان</h3>
+                            <p>جدة - حي الشاطئ</p>
+                            <p>الرياض - حي المناخ</p>
                         </div>
                     </div>
 
-                    <!-- الهاتف -->
-                    <div class="contact-item">
-                        <div class="icon-box"><i class="fas fa-phone-volume"></i></div>
-                        <div class="text-box">
-                            <h3>اتصل بنا</h3>
-                            <p dir="ltr">00966566851495</p>
-                            <p>متاح اتصال وواتساب 24/7</p>
-                        </div>
-                    </div>
-
-                    <!-- الإيميل -->
-                    <div class="contact-item">
-                        <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
-                        <div class="text-box">
-                            <h3>البريد الإلكتروني</h3>
+                    <!-- التواصل -->
+                    <div class="info-group-item">
+                        <div class="icon-red-box"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-content">
+                            <h3>تواصل معنا</h3>
+                            <p dir="ltr">+966 566851495</p>
                             <p>info@ssh-ksa.com</p>
-                            <p>M.gendia@ssh-ksa.com</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- الجزء الأيسر: فورم المراسلة -->
-                <div class="contact-form-container" data-aos="fade-left">
-                    <form id="contactForm">
-                        <div class="input-group">
-                            <input type="text" placeholder="الاسم بالكامل *" required>
-                        </div>
-                        <div class="input-group">
-                            <input type="email" placeholder="البريد الإلكتروني *" required>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" placeholder="عنوان الرسالة">
-                        </div>
-                        <div class="input-group">
-                            <textarea placeholder="رسالتك هنا *" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn-contact">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
-                    </form>
                 </div>
             </div>
+
         </div>
     </section>
-
-      <footer class="main-footer">
+    <footer class="premium-footer">
         <div class="container footer-grid">
-
-            <!-- العمود الأول (يمين): بيانات التواصل -->
-            <div class="footer-column contact-info-col" data-aos="fade-up">
+            <!-- العمود الثالث: البيانات -->
+            <div class="footer-column">
                 <div class="f-head">
-                    <span>SSH KSA</span>
                     <span class="f-red-line"></span>
+                    <span class="f-label">SSH KSA</span>
                 </div>
-                <h3 class="f-title-red">المقر الرئيسي</h3>
-                <ul class="f-contact-list">
-                    <li><a href="tel:00966566851495">00966566851495 <i class="fas fa-phone-alt"></i></a></li>
-                    <li><a href="mailto:info@ssh-ksa.com">info@ssh-ksa.com <i class="fas fa-envelope"></i></a></li>
-                    <li><a href="https://ssh-ksa.com">ssh-ksa.com <i class="fas fa-globe"></i></a></li>
+                <h3 class="f-main-title">المقر الرئيسي</h3>
+                <ul class="f-contact-details">
+                    <li><a href="tel:00966566851495"><i class="fas fa-phone-alt"></i>00966566851495 </a></li>
+                    <li><a href="mailto:info@ssh-ksa.com"> <i class="fas fa-envelope"></i>info@ssh-ksa.com</a></li>
+                    <li><a href="https://ssh-ksa.com"><i class="fas fa-globe"></i>ssh-ksa.com </a></li>
                 </ul>
             </div>
 
-            <!-- العمود الثاني (وسط): المواقع والخريطة -->
-            <div class="footer-column map-location-col" data-aos="fade-up" data-aos-delay="100">
+            <!-- العمود الثاني: المواقع والخريطة -->
+            <div class="footer-column map-col">
                 <div class="f-head">
-                    <span>مواقعنا</span>
                     <span class="f-red-line"></span>
+                    <span class="f-label">مواقعنا</span>
                 </div>
-                <h3 class="f-title-red">أين تجدنا؟</h3>
-                <div class="map-bg-wrapper">
-                    <!-- صورة خريطة العالم المنقطة -->
-                    <img src="images/Map.png" alt="Map" class="f-map-dots">
-                    <div class="location-details">
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>الفرع الرئيسي:</strong> جدة - حي الشاطئ</p>
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>فرع الرياض:</strong> حي المناخ</p>
-                        <p class="country-name">المملكة العربية السعودية</p>
+                <h3 class="f-main-title">أين تجدنا؟</h3>
+
+                <!-- الحاوية الجديدة لجمع الخريطة والكلام جنب بعض -->
+                <div class="map-content-horizontal">
+                    <div class="loc-list">
+                        <p><i class="fas fa-map-marker-alt"></i> جدة - حي الشاطئ</p>
+                        <p><i class="fas fa-map-marker-alt"></i> الرياض - حي المناخ</p>
+                        <p class="country-text">المملكة العربية السعودية</p>
                     </div>
+                    <img src="images/Map.png" alt="Map" class="map-dots-mini">
                 </div>
             </div>
 
-            <!-- العمود الثالث (يسار): السوشيال ميديا -->
-            <div class="footer-column social-links-col" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- العمود الأول: السوشيال ميديا -->
+            <div class="footer-column">
                 <div class="f-head">
-                    <span>تواصل معنا الآن</span>
                     <span class="f-red-line"></span>
+                    <span class="f-label">تواصل معنا الآن</span>
                 </div>
                 <div class="f-social-icons">
-                    <a href="#" class="s-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="s-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="s-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="s-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="s-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="s-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="s-btn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+
 
         </div>
 
-        <!-- شريط الحقوق -->
-        <div class="footer-bottom-bar">
+        <!-- شريط الحقوق السفلي -->
+        <div class="footer-copyright">
             <div class="container">
-                <p>جميع الحقوق محفوظة لمؤسسة SSH KSA &copy; 2025</p>
+                <p>جميع الحقوق محفوظة لمؤسسة SSH KSA © 2025</p>
             </div>
         </div>
     </footer>
@@ -179,4 +181,5 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
