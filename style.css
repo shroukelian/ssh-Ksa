@@ -1,8 +1,6 @@
 :root {
     --primary: #d11b3d;
-    /* الأحمر الخاص بـ ASB */
     --secondary: #1a2c4e;
-    /* الكحلي الخاص بـ ASB */
     --white: #ffffff;
     --light-bg: #f8fafc;
 }
@@ -476,7 +474,6 @@ footer {
     overflow: hidden;
 }
 
-/* الخط الأحمر الصغير بجانب العنوان */
 .red-line-short {
     display: inline-block;
     width: 60px;
@@ -501,27 +498,23 @@ footer {
     padding: 40px 10px;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    /* إخفاء السكرول بار */
 }
 
 .clients-container::-webkit-scrollbar {
     display: none;
 }
 
-/* تصميم الشكل المعين (Diamond) */
 .client-diamond {
     min-width: 180px;
     height: 180px;
     background: #fff;
     transform: rotate(45deg);
-    /* تدوير المربع ليصبح معين */
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     border: 1px solid #f0f0f0;
     margin: 30px;
-    /* مسافة بسبب التدوير */
     transition: 0.4s;
     cursor: pointer;
 }
@@ -534,7 +527,6 @@ footer {
 
 .diamond-content {
     transform: rotate(-45deg);
-    /* إرجاع المحتوى (اللوجو) للوضع العدل */
     width: 100px;
     height: 100px;
     display: flex;
@@ -545,7 +537,6 @@ footer {
 .diamond-content img {
     max-width: 100%;
     max-height: 100%;
-    /* جعل اللوجوهات أبيض وأسود مثل الموقع المرجعي */
     opacity: 0.7;
     transition: 0.3s;
 }
@@ -555,7 +546,6 @@ footer {
     opacity: 1;
 }
 
-/* أسهم التنقل */
 .client-arrow {
     background: transparent;
     border: none;
@@ -571,7 +561,6 @@ footer {
     color: var(--primary);
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 768px) {
     .client-diamond {
         min-width: 130px;
@@ -586,11 +575,9 @@ footer {
         display: none;
     }
 
-    /* إخفاء الأسهم في الموبايل والاعتماد على السكرول باللمس */
 }
 
 
-/* حاوية السلايدر الرئيسية */
 .hero-slider-wrapper {
     position: relative;
     height: 90vh;
@@ -599,7 +586,6 @@ footer {
     background: #000;
 }
 
-/* السلايد الواحد */
 .hero-slide {
     position: absolute;
     top: 0;
@@ -607,10 +593,8 @@ footer {
     width: 100%;
     height: 100%;
     opacity: 0;
-    /* مخفي افتراضياً */
     visibility: hidden;
     transition: opacity 1.5s ease-in-out;
-    /* حركة التلاشي */
     display: flex;
     align-items: center;
     z-index: 1;
@@ -622,7 +606,6 @@ footer {
     z-index: 2;
 }
 
-/* خلفية الصورة */
 .slide-bg {
     position: absolute;
     top: 0;
@@ -633,7 +616,6 @@ footer {
     z-index: -1;
 }
 
-/* محاذاة المحتوى */
 .hero-content {
     position: relative;
     z-index: 10;
@@ -642,11 +624,9 @@ footer {
     text-align: right;
 }
 
-/* النقاط الجانبية (Dots) */
 .slider-dots {
     position: absolute;
     left: 30px;
-    /* في الجانب الأيسر مثل ASB */
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -666,11 +646,9 @@ footer {
 
 .dot.active {
     background: var(--primary);
-    /* اللون الأحمر */
     transform: scale(1.3);
 }
 
-/* أنيميشن دخول النصوص عند تغيير السلايد */
 .hero-slide.active h1 {
     animation: fadeInUp 1s both 0.5s;
 }
@@ -692,18 +670,14 @@ footer {
 }
 
 
-/* حاوية السلايدر الرئيسية */
 .hero-slider-wrapper {
     position: relative;
     height: 90vh;
-    /* طول الشاشة */
     width: 100%;
     overflow: hidden;
     background-color: #1a2c4e;
-    /* لون كحلي كخلفية احتياطية بدلاً من الأسود */
 }
 
-/* السلايد الواحد */
 .hero-slide {
     position: absolute;
     top: 0;
@@ -718,14 +692,12 @@ footer {
     z-index: 1;
 }
 
-/* السلايد النشط */
 .hero-slide.active {
     opacity: 1;
     visibility: visible;
     z-index: 2;
 }
 
-/* خلفية الصورة - تأكد من الـ z-index */
 .slide-bg {
     position: absolute;
     top: 0;
@@ -733,12 +705,9 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* تجعل الصورة تملأ المساحة */
     z-index: -2;
-    /* تكون تحت كل حاوية السلايد */
 }
 
-/* طبقة التغطية الشفافة (Overlay) */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -746,12 +715,9 @@ footer {
     width: 100%;
     height: 100%;
     background: rgba(15, 23, 42, 0.6);
-    /* شفافية سودة خفيفة مش سادة */
     z-index: -1;
-    /* فوق الصورة وتحت الكلام */
 }
 
-/* النصوص - تأكد من اللون الأبيض والـ z-index */
 .hero-content {
     position: relative;
     z-index: 10;
@@ -759,7 +725,6 @@ footer {
     margin: auto;
     text-align: right;
     color: #ffffff;
-    /* لون أبيض صريح */
 }
 
 html,
@@ -784,10 +749,8 @@ body {
     padding: 0 15px;
 }
 
-/* --- تعديلات الجوال الاحترافية --- */
 @media (max-width: 768px) {
 
-    /* 1. ضبط التوب بار ليكون في خط واحد */
     .top-bar {
         padding: 5px 0;
     }
@@ -795,7 +758,6 @@ body {
     .top-bar .container {
         display: flex !important;
         flex-direction: row !important;
-        /* إجبارهم على البقاء في سطر واحد */
         justify-content: center !important;
         flex-wrap: nowrap !important;
         gap: 8px;
@@ -803,31 +765,25 @@ body {
 
     .top-bar a {
         font-size: 0.65rem !important;
-        /* تصغير الخط ليناسب الشاشة */
         margin: 0 !important;
         white-space: nowrap;
-        /* منع النص من النزول لسطر جديد */
     }
 
     .top-bar i {
         margin-left: 2px !important;
     }
 
-    /* إخفاء أيقونات السوشيال ميديا في التوب بار للجوال فقط لتوفير مساحة */
     .top-bar .social-icons {
         display: none !important;
     }
 
-    /* 2. ضبط الهيرو سكشن ومحاذاة النصوص */
     .hero-slider-wrapper {
         height: 100vh;
-        /* ملء الشاشة */
     }
 
     .hero-content {
         width: 90% !important;
         text-align: center !important;
-        /* توسيط الكلام في الجوال أجمل */
         padding: 0 10px;
     }
 
@@ -837,16 +793,13 @@ body {
 
     .hero-content h1 {
         font-size: 2rem !important;
-        /* حجم مناسب للجوال */
         line-height: 1.3;
     }
 
-    /* 3. إضافة مسافة بين الأزرار */
     .hero-btns {
         display: flex !important;
         flex-direction: column !important;
         gap: 15px !important;
-        /* مسافة عمودية بين الزرين */
         margin-top: 25px;
     }
 
@@ -856,13 +809,11 @@ body {
         padding: 12px !important;
     }
 
-    /* 4. إبعاد نقاط السلايدر عن النص */
     .slider-dots {
         left: 10px !important;
         gap: 10px;
     }
 
-    /* 5. ضبط اللوجو في الموبايل */
     .logo img {
         height: 60px !important;
     }
@@ -873,19 +824,15 @@ body {
 
     .logo .full {
         display: none;
-        /* إخفاء الاسم الطويل في الهيدر للجوال */
     }
 }
 
-/* --- توسيط محتوى الفوتر في الموبايل --- */
 @media (max-width: 992px) {
     .footer-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* توسيط العناصر عرضياً */
         text-align: center;
-        /* توسيط النصوص */
         gap: 40px;
     }
 
@@ -895,17 +842,14 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* لضمان توسيط محتوى كل عمود */
         width: 100%;
     }
 
     .social-f {
         justify-content: center;
-        /* توسيط أيقونات السوشيال ميديا */
         margin-top: 15px;
     }
 
-    /* إذا كان هناك خط تحت العناوين يحتاج للتوسيط */
     .f-location h3::after,
     .f-contact h3::after {
         left: 50% !important;
@@ -920,13 +864,11 @@ body {
     }
 }
 
-/* --- ضبط سلايدر العملاء للموبايل --- */
 @media (max-width: 768px) {
     .clients-section {
         padding: 60px 0;
     }
 
-    /* 1. توسيط النصوص والخط الأحمر */
     .clients-section .section-head {
         text-align: center !important;
         display: flex;
@@ -943,11 +885,9 @@ body {
 
     .red-line-short {
         margin: 0 !important;
-        /* إلغاء المارجن الجانبي */
         width: 50px;
     }
 
-    /* 2. ضبط الحاوية لتسمح بالتمرير السلس أو التراص */
     .clients-wrapper {
         margin-top: 40px;
     }
@@ -955,32 +895,22 @@ body {
     .clients-container {
         display: flex;
         justify-content: center;
-        /* توسيط المعينات */
         flex-wrap: wrap;
-        /* جعلهم ينزلوا تحت بعض لو المساحة ضيقة */
         gap: 10px;
-        /* تقليل المسافات */
         padding: 20px 0;
     }
 
-    /* 3. تصغير حجم المعينات (الألماس) لتناسب الموبايل */
     .client-diamond {
         min-width: 100px !important;
-        /* تصغير العرض */
         height: 100px !important;
-        /* تصغير الطول */
         margin: 15px !important;
-        /* تقليل الهامش لتقريبهم من بعض */
         transform: rotate(45deg);
-        /* الحفاظ على الدوران */
     }
 
-    /* 4. تصغير اللوجو داخل المعين */
     .diamond-content {
         width: 60px !important;
         height: 60px !important;
         transform: rotate(-45deg);
-        /* الحفاظ على وضع اللوجو العدل */
     }
 
     .diamond-content img {
@@ -995,7 +925,6 @@ html {
 
 
 
-/* --- قسم التعريف بالمؤسسة --- */
 .company-intro {
     padding: 100px 0 60px;
     background-color: #fff;
@@ -1017,14 +946,14 @@ html {
 .sub-label .red-line {
     width: 50px;
     height: 3px;
-    background-color: var(--primary); /* اللون الأحمر */
+    background-color: var(--primary);
 }
 
 .main-intro-title {
     font-size: 3.8rem;
     font-weight: 900;
     line-height: 1.2;
-    color: var(--secondary); /* الكحلي */
+    color: var(--secondary); 
 }
 
 .highlight-blue {
@@ -1063,7 +992,6 @@ html {
     border-bottom-color: var(--primary);
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 768px) {
     .main-intro-title {
         font-size: 2.2rem;
@@ -1077,7 +1005,6 @@ html {
     }
 }
 
-/* تحسينات النص الجديد */
 .company-intro {
     padding: 100px 0;
     background: #fff;
@@ -1088,7 +1015,7 @@ html {
     line-height: 2.2;
     color: #2d3748;
     margin-bottom: 25px;
-    text-align: justify; /* ليكون النص منسقاً كالمجلات الاحترافية */
+    text-align: justify; 
 }
 
 .intro-content strong {
@@ -1096,7 +1023,6 @@ html {
     font-weight: 800;
 }
 
-/* صندوق تمييز رؤية 2030 */
 .vision-2030-box {
     background: #f8fafc;
     border-right: 5px solid var(--primary);
@@ -1136,7 +1062,6 @@ html {
     transform: scale(1.05);
 }
 
-/* الموبايل */
 @media (max-width: 768px) {
     .intro-content p {
         text-align: right;
@@ -1147,9 +1072,8 @@ html {
     }
 }
 
-/* --- تنسيق الفوتر الاحترافي --- */
 .main-footer {
-    background-color: #1a2c4e; /* لون كحلي غامق مثل ASB */
+    background-color: #1a2c4e;
     color: #ffffff;
     padding: 80px 0 0;
     position: relative;
@@ -1158,12 +1082,11 @@ html {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr; /* تقسيم الأعمدة */
+    grid-template-columns: 1fr 1.5fr 1fr; 
     gap: 40px;
     padding-bottom: 60px;
 }
 
-/* العناوين الصغيرة فوق العناوين الرئيسية */
 .f-head {
     display: flex;
     align-items: center;
@@ -1187,7 +1110,6 @@ html {
     margin-bottom: 30px;
 }
 
-/* قائمة الاتصال */
 .f-contact-list {
     list-style: none;
     padding: 0;
@@ -1195,7 +1117,7 @@ html {
 
 .f-contact-list li {
     margin-bottom: 15px;
-    text-align: left; /* لتبقى الأرقام والرموز منضبطة */
+    text-align: left; 
 }
 
 .f-contact-list a {
@@ -1205,7 +1127,7 @@ html {
     font-weight: 600;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* لضبط الاتجاه في RTL */
+    justify-content: flex-end; 
     gap: 12px;
     transition: 0.3s;
 }
@@ -1219,7 +1141,6 @@ html {
     color: #fff;
 }
 
-/* قسم الخريطة والمواقع */
 .map-bg-wrapper {
     position: relative;
     text-align: center;
@@ -1228,7 +1149,7 @@ html {
 .f-map-dots {
     width: 100%;
     max-width: 400px;
-    opacity: 0.2; /* خريطة باهتة في الخلفية */
+    opacity: 0.2; 
     margin-bottom: 20px;
 }
 
@@ -1249,7 +1170,6 @@ html {
     margin-top: 15px;
 }
 
-/* أيقونات السوشيال ميديا (الدوائر الحمراء) */
 .f-social-icons {
     display: flex;
     gap: 15px;
@@ -1276,7 +1196,6 @@ html {
     color: #d11b3d;
 }
 
-/* شريط الحقوق السفلي */
 .footer-bottom-bar {
     background-color: #13213a;
     padding: 25px 0;
@@ -1290,7 +1209,6 @@ html {
     margin: 0;
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1302,58 +1220,53 @@ html {
     .f-social-icons { justify-content: center; }
 }
 
-/* --- نسخة الفوتر الملمومة والأنيقة --- */
 .main-footer {
     background-color: #1a2c4e;
     color: #ffffff;
-    padding: 40px 0 0; /* قللنا المسافة اللي فوق من 80 لـ 40 */
+    padding: 40px 0 0; 
     position: relative;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr; /* ظبطنا النسب */
-    gap: 20px; /* قللنا الفراغ بين الأعمدة */
-    padding-bottom: 30px; /* قللنا المسافة اللي تحت */
+    grid-template-columns: 1fr 1.2fr 1fr; 
+    gap: 20px; 
+    padding-bottom: 30px; 
 }
 
-/* العناوين الصغيرة */
 .f-head {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.8rem; /* صغرنا الخط */
+    font-size: 0.8rem;
     color: #cbd5e0;
-    margin-bottom: 8px; /* قللنا المسافة */
+    margin-bottom: 8px; 
 }
 
 .f-red-line {
-    width: 25px; /* قصرنا الخط */
+    width: 25px; 
     height: 2px;
     background-color: #d11b3d;
 }
 
-/* العناوين الحمراء الكبيرة */
 .f-title-red {
     color: #d11b3d;
-    font-size: 1.3rem; /* صغرنا الحجم من 1.8 لـ 1.3 */
+    font-size: 1.3rem;
     font-weight: 800;
-    margin-bottom: 15px; /* قللنا المسافة تحت العنوان */
+    margin-bottom: 15px; 
 }
 
-/* قائمة الاتصال */
 .f-contact-list li {
-    margin-bottom: 8px; /* قللنا المسافة بين السطور */
+    margin-bottom: 8px;
 }
 
 .f-contact-list a {
-    font-size: 0.95rem; /* صغرنا الخط شوية */
+    font-size: 0.95rem;
     gap: 10px;
 }
 
-/* قسم الخريطة والمواقع */
 .f-map-dots {
-    max-width: 280px; /* صغرنا الخريطة عشان ماتاخدش طول */
+    max-width: 280px;
     opacity: 0.15;
     margin-bottom: 10px;
 }
@@ -1363,23 +1276,20 @@ html {
     margin-bottom: 5px;
 }
 
-/* أيقونات السوشيال ميديا */
 .s-icon {
-    width: 35px; /* صغرنا الدواير من 45 لـ 35 */
+    width: 35px; 
     height: 35px;
     font-size: 1rem;
 }
 
-/* شريط الحقوق السفلي */
 .footer-bottom-bar {
-    padding: 15px 0; /* قللنا سمك الشريط الأسود اللي تحت */
+    padding: 15px 0;
 }
 
 .footer-bottom-bar p {
     font-size: 0.75rem;
 }
 
-/* تحسين للموبايل عشان ميبقاش طويل بزيادة */
 @media (max-width: 992px) {
     .footer-grid {
         gap: 30px;
@@ -1389,45 +1299,37 @@ html {
         margin-bottom: 15px;
     }
 }
-/* --- تنسيق قسم السوشيال ميديا في التوب بار --- */
 .social-icons {
     display: flex;
     align-items: center;
-    gap: 12px; /* المسافة بين الأيقونات */
+    gap: 12px;
 }
 
-/* تنسيق النص */
 .social-label {
-    color: #e9d02d; /* لون نص رمادي غامق */
+    color: #e9d02d;
     font-size: 0.9rem;
-    font-family: sans-serif; /* الخط الإنجليزي */
-    margin-left: 10px; /* مسافة بسيطة قبل الأيقونات */
+    font-family: sans-serif;
+    margin-left: 10px; 
     font-weight: 500;
 }
 
-/* تنسيق الأيقونات */
 .social-icons a i {
-    color: #d11b3d; /* اللون الأحمر النبيتي الموجود في الصورة */
+    color: #d11b3d;
     font-size: 1rem;
     transition: 0.3s ease;
 }
 
-/* تأثير عند تمرير الماوس */
 .social-icons a:hover i {
-    color: var(--secondary); /* يتغير لونه للكحلي عند الوقوف عليه */
+    color: var(--secondary); 
     transform: translateY(-2px);
 }
 
-/* إخفاء النص في الشاشات الصغيرة جداً لتوفير مساحة */
 @media (max-width: 480px) {
     .social-label {
         display: none;
     }
 }
 
-/* --- Contact Page Specific Styles --- */
-
-/* بنر عنوان الصفحة */
 .page-banner {
     background: linear-gradient(rgba(26, 44, 78, 0.9), rgba(26, 44, 78, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000');
     background-size: cover;
@@ -1454,7 +1356,6 @@ html {
     text-decoration: none;
 }
 
-/* قسم التواصل Get in touch */
 .contact-full-area {
     padding-bottom: 100px;
 }
@@ -1544,7 +1445,7 @@ html {
 /* Map */
 .map-frame {
     line-height: 0;
-    filter: grayscale(100%) invert(90%) contrast(90%); /* حركة اختيارية لجعل الخريطة متماشية مع ألوان الموقع */
+    filter: grayscale(100%) invert(90%) contrast(90%); 
 }
 
 /* Responsive */
@@ -1557,7 +1458,6 @@ html {
     }
 }
 
-/* تنسيقات صفحة المدونة */
 .blog-list-area { padding: 80px 0; background: #f9fafb; }
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
 .blog-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
@@ -1568,7 +1468,6 @@ html {
 .blog-info p { color: #64748b; font-size: 0.95rem; margin-bottom: 20px; height: 60px; overflow: hidden; }
 .read-more { color: var(--primary); font-weight: 800; text-decoration: none; }
 
-/* تنسيقات المقال التفصيلي */
 .post-detail-container { padding: 120px 0 80px; }
 .detail-title { font-size: 2.8rem; font-weight: 900; color: var(--secondary); margin-bottom: 20px; line-height: 1.2; }
 .post-meta { margin-bottom: 40px; color: #94a3b8; border-bottom: 1px solid #eee; padding-bottom: 15px; }
@@ -1586,7 +1485,6 @@ html {
 }
 .advice-box h4 { color: var(--primary); font-weight: 900; margin-bottom: 10px; }
 
-/* --- Blog Details Page Styling --- */
 .blog-detail-section {
     padding: 120px 0 80px;
     background: #fff;
@@ -1643,7 +1541,6 @@ html {
     color: #475569;
 }
 
-/* صندوق النصيحة Advice Box (ستايل ASB) */
 .advice-box {
     background: #fffafa;
     border-right: 6px solid var(--primary);
@@ -1661,7 +1558,6 @@ html {
     gap: 10px;
 }
 
-/* نموذج التعليقات */
 .comment-section-area {
     margin-top: 60px;
     padding-top: 40px;
@@ -1703,13 +1599,11 @@ html {
 
 .btn-red-blog:hover { background: var(--secondary); }
 
-/* الموبايل */
 @media (max-width: 768px) {
     .featured-image { height: 250px; }
     .post-title { font-size: 1.8rem; }
     .comment-form-custom .input-grid { grid-template-columns: 1fr; }
 }
-/* --- ضبط الفوتر للموبايل بشكل احترافي --- */
 @media (max-width: 992px) {
     .main-footer {
         padding: 40px 0 0;
@@ -1717,12 +1611,11 @@ html {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr; /* جعل الأعمدة فوق بعضها */
-        gap: 40px; /* مسافة بين كل قسم والثاني */
+        grid-template-columns: 1fr; 
+        gap: 40px;
         padding: 0 20px 40px;
     }
 
-    /* توسيط العناوين والخطوط الحمراء */
     .f-head {
         justify-content: center;
         margin-bottom: 10px;
@@ -1733,10 +1626,9 @@ html {
         margin-bottom: 20px;
     }
 
-    /* ضبط قائمة الاتصال */
     .f-contact-list a {
-        justify-content: center; /* توسيط الأرقام والإيميلات */
-        flex-direction: row-reverse; /* لضمان ظهور الأيقونة بجانب النص صح */
+        justify-content: center; 
+        flex-direction: row-reverse;
         gap: 10px;
         font-size: 1rem;
     }
@@ -1745,7 +1637,6 @@ html {
         text-align: center;
     }
 
-    /* ضبط الخريطة والمواقع */
     .map-bg-wrapper {
         display: flex;
         flex-direction: column;
@@ -1753,7 +1644,7 @@ html {
     }
 
     .f-map-dots {
-        max-width: 250px; /* تصغير الخريطة في الموبايل */
+        max-width: 250px; 
         margin-bottom: 15px;
     }
 
@@ -1762,7 +1653,6 @@ html {
         line-height: 1.6;
     }
 
-    /* توسيط أيقونات السوشيال ميديا */
     .f-social-icons {
         justify-content: center;
         margin-top: 10px;
@@ -1773,7 +1663,6 @@ html {
         height: 40px;
     }
 
-    /* شريط الحقوق السفلي */
     .footer-bottom-bar {
         padding: 20px 0;
     }
@@ -1782,7 +1671,6 @@ html {
         font-size: 0.8rem;
     }
 }
-/* --- Contact Section ASB Style --- */
 .contact-section-asb {
     padding: 100px 0;
     background-color: #fff;
@@ -1791,12 +1679,11 @@ html {
 
 .contact-grid-asb {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* تقسيم الشاشة لجزئين */
+    grid-template-columns: 1.2fr 1fr; 
     gap: 80px;
     align-items: start;
 }
 
-/* العناوين */
 .head-asb {
     margin-bottom: 30px;
     text-align: right;
@@ -1823,7 +1710,6 @@ html {
     max-width: 500px;
 }
 
-/* النموذج (Form) */
 .asb-form-actual {
     display: flex;
     flex-direction: column;
@@ -1851,7 +1737,7 @@ html {
 }
 
 .form-footer {
-    text-align: left; /* زر الإرسال جهة اليسار مثل ASB */
+    text-align: left; 
 }
 
 .btn-asb-red {
@@ -1871,7 +1757,6 @@ html {
     transform: translateY(-2px);
 }
 
-/* بيانات التواصل */
 .info-blocks-vertical {
     display: flex;
     flex-direction: column;
@@ -1903,7 +1788,6 @@ html {
     line-height: 1.6;
 }
 
-/* الموبايل */
 @media (max-width: 992px) {
     .contact-grid-asb {
         grid-template-columns: 1fr;
@@ -1915,8 +1799,8 @@ html {
 
 
 .advice-box {
-    background: #fff5f6; /* خلفية وردية خفيفة جداً */
-    border-right: 6px solid #d11b3d; /* حد أحمر سميك من اليمين */
+    background: #fff5f6;
+    border-right: 6px solid #d11b3d; 
     padding: 30px;
     margin: 40px 0;
     border-radius: 4px;
@@ -1935,7 +1819,6 @@ html {
 }
 
 
-/* --- ستايل المقال والتعليقات --- */
 .post-details { padding-top: 150px; background: #fff; }
 .post-header-area { text-align: center; margin-bottom: 50px; }
 .post-featured-img { width: 100%; height: 500px; object-fit: cover; border-radius: 10px; margin-top: 30px; }
@@ -1949,7 +1832,6 @@ html {
 .post-content-body ul { margin-right: 30px; margin-bottom: 30px; }
 .post-content-body li { margin-bottom: 15px; color: #475569; font-size: 1.1rem; }
 
-/* قسم شارك برأيك */
 .share-opinion-area { margin-top: 100px; padding-top: 50px; border-top: 1px solid #eee; max-width: 900px; margin-left: auto; margin-right: auto; }
 .opinion-title { font-size: 1.8rem; font-weight: 900; color: #1a2c4e; text-align: center; }
 .opinion-subtitle { text-align: center; color: #64748b; margin-bottom: 40px; font-family: sans-serif; font-size: 0.9rem; }
@@ -1964,7 +1846,6 @@ html {
 .submit-opinion-btn { background: #d11b3d; color: white; border: none; padding: 15px 40px; font-weight: 900; cursor: pointer; border-radius: 4px; font-size: 1.1rem; }
 .submit-opinion-btn:hover { background: #1a2c4e; transform: translateY(-3px); }
 
-/* الموبايل */
 @media (max-width: 768px) {
     .post-main-title { font-size: 1.8rem; }
     .post-featured-img { height: 250px; }
@@ -1972,9 +1853,8 @@ html {
 }
 
 
-/* --- Premium Footer Styling (ASB Style) --- */
 .premium-footer {
-    background-color: #1a2c4e; /* الكحلي العميق */
+    background-color: #1a2c4e; 
     color: #ffffff;
     padding: 60px 0 0;
     font-family: 'Cairo', sans-serif;
@@ -1982,12 +1862,11 @@ html {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr; /* توزيع المسافات بين الأعمدة */
+    grid-template-columns: 1fr 1.5fr 1fr; 
     gap: 30px;
     padding-bottom: 50px;
 }
 
-/* الترويسات الصغيرة مع الخط الأحمر */
 .f-head {
     display: flex;
     align-items: center;
@@ -1998,7 +1877,7 @@ html {
 .f-red-line {
     width: 30px;
     height: 2px;
-    background-color: #d11b3d; /* الأحمر الخاص بالهوية */
+    background-color: #d11b3d;
 }
 
 .f-label {
@@ -2014,7 +1893,6 @@ html {
     margin-bottom: 25px;
 }
 
-/* السوشيال ميديا */
 .f-social-icons {
     display: flex;
     gap: 12px;
@@ -2040,7 +1918,6 @@ html {
     transform: translateY(-3px);
 }
 
-/* قسم الخريطة والمواقع */
 .map-wrapper {
     position: relative;
     text-align: center;
@@ -2048,7 +1925,7 @@ html {
 
 .map-dots-img {
     max-width: 100%;
-    opacity: 0.15; /* خريطة باهتة في الخلفية */
+    opacity: 0.15;
     margin-bottom: 20px;
 }
 
@@ -2072,7 +1949,6 @@ html {
     margin-top: 10px;
 }
 
-/* قائمة الاتصال */
 .f-contact-details {
     list-style: none;
     padding: 0;
@@ -2103,7 +1979,6 @@ html {
     font-size: 1.1rem;
 }
 
-/* شريط الحقوق السفلي */
 .footer-copyright {
     background-color: #12213a;
     padding: 20px 0;
@@ -2117,7 +1992,6 @@ html {
     margin: 0;
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr;
@@ -2131,33 +2005,31 @@ html {
 
 
 
-/* --- تقليل حجم الفوتر الكلي --- */
 .premium-footer {
     background-color: #1a2c4e;
     color: #ffffff;
-    padding: 30px 0 0; /* قللنا المسافة العلوية */
+    padding: 30px 0 0;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1.8fr 1fr; /* وسعنا العمود الأوسط */
+    grid-template-columns: 1fr 1.8fr 1fr; 
     gap: 40px;
-    padding-bottom: 30px; /* قللنا المسافة السفلية */
+    padding-bottom: 30px;
 }
 
-/* --- تنسيق الخريطة والمواقع جنب بعض --- */
 .map-content-horizontal {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background: rgba(255, 255, 255, 0.03); /* خلفية خفيفة جداً للتمييز */
+    background: rgba(255, 255, 255, 0.03); 
     padding: 15px;
     border-radius: 8px;
 }
 
 .map-dots-mini {
-    width: 180px; /* صغرنا حجم الخريطة */
+    width: 180px;
     height: auto;
     opacity: 0.2;
 }
@@ -2170,15 +2042,14 @@ html {
 .loc-list p {
     font-size: 0.9rem;
     margin-bottom: 6px;
-    white-space: nowrap; /* منع الكلام ينزل سطرين */
+    white-space: nowrap; 
 }
 
 .f-main-title {
-    font-size: 1.4rem; /* صغرنا العنوان شوية */
+    font-size: 1.4rem; 
     margin-bottom: 15px;
 }
 
-/* --- ضبط المسافات في الأعمدة الجانبية --- */
 .f-contact-details li {
     margin-bottom: 10px;
 }
@@ -2188,12 +2059,11 @@ html {
 }
 
 .s-btn {
-    width: 35px; /* صغرنا أيقونات السوشيال ميديا */
+    width: 35px; 
     height: 35px;
     font-size: 1rem;
 }
 
-/* الموبايل: يرجعوا تحت بعض عشان المساحة */
 @media (max-width: 992px) {
     .map-content-horizontal {
         flex-direction: column-reverse;
@@ -2205,35 +2075,27 @@ html {
 }
 
 
-
-/* --- تعديلات اللغة الإنجليزية LTR --- */
-
-/* عندما تكون الصفحة إنجليزية */
 [dir="ltr"] body {
     text-align: left;
 }
 
-/* قلب مكان الخط الأحمر في الهيدر */
 [dir="ltr"] .sub-label .red-line, 
 [dir="ltr"] .sub-heading .red-line {
     margin-left: 0;
     margin-right: 15px;
 }
 
-/* قلب مكان اللوجو المثبت */
 [dir="ltr"] .right-logo-box {
     right: auto;
-    left: 40px; /* ينتقل لليسار في النسخة الإنجليزية */
+    left: 40px;
 }
 
-/* قلب شكل المثلث المائل في الهيرو */
 [dir="ltr"] .diagonal-bg {
     right: auto;
     left: 0;
     clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
 }
 
-/* تعديل القوائم النقطية */
 [dir="ltr"] .article-list {
     padding-right: 0;
     padding-left: 20px;
@@ -2247,41 +2109,36 @@ html {
     left: 0;
 }
 
-/* الفوتر في الإنجليزي */
 [dir="ltr"] .f-red-line {
     margin-right: 0;
     margin-left: 10px;
 }
 
-/* ============================================================
-   ضبط اتجاه النصوص والعناصر للنسخة الإنجليزية (LTR)
-   ============================================================ */
+
 
 [dir="ltr"] body {
-    text-align: left; /* توجيه النص العام لليسار */
+    text-align: left; 
 }
 
-/* 1. التوب بار والناف بار */
 [dir="ltr"] .contact-info {
     flex-direction: row;
 }
 
 [dir="ltr"] .social-label {
     margin-left: 0;
-    margin-right: 10px; /* مسافة النص عن الأيقونات من اليمين */
+    margin-right: 10px; 
 }
 
 [dir="ltr"] .logo-text {
     text-align: left;
     padding-left: 12px;
     padding-right: 0;
-    border-left: 2px solid #eee; /* نقل الخط الفاصل لليسار */
+    border-left: 2px solid #eee; 
     border-right: none;
 }
 
-/* 2. الهيرو سكشن (Hero Section) */
 [dir="ltr"] .hero-content {
-    text-align: left !important; /* محاذاة العنوان والوصف لليسار */
+    text-align: left !important; 
 }
 
 [dir="ltr"] .sub-heading {
@@ -2289,7 +2146,7 @@ html {
 }
 
 [dir="ltr"] .sub-heading .red-line {
-    margin-right: 10px; /* الخط الأحمر قبل الكلام */
+    margin-right: 10px; 
     margin-left: 0;
 }
 
@@ -2298,11 +2155,10 @@ html {
 }
 
 [dir="ltr"] .hero-btns .btn {
-    margin-right: 15px; /* مسافة بين الأزرار */
+    margin-right: 15px; 
     margin-left: 0;
 }
 
-/* 3. قسم التعريف (About Us) */
 [dir="ltr"] .company-intro {
     text-align: left;
 }
@@ -2312,11 +2168,11 @@ html {
 }
 
 [dir="ltr"] .intro-content p {
-    text-align: left; /* أهم جزء لإصلاح الفقرات في الصورة */
+    text-align: left; 
 }
 
 [dir="ltr"] .vision-2030-box {
-    border-left: 5px solid var(--primary); /* نقل الخط الأحمر لليسار */
+    border-left: 5px solid var(--primary); 
     border-right: none;
     padding-left: 30px;
     padding-right: 20px;
@@ -2327,7 +2183,6 @@ html {
     margin-right: 0;
 }
 
-/* 4. الخدمات (Services) */
 [dir="ltr"] .service-box {
     text-align: left;
 }
@@ -2336,10 +2191,9 @@ html {
     text-align: left;
 }
 
-/* 5. الفوتر (Footer) */
 [dir="ltr"] .f-contact-list a {
     justify-content: flex-start;
-    flex-direction: row; /* ضبط الأرقام بجانب الأيقونات */
+    flex-direction: row; 
 }
 
 [dir="ltr"] .f-head {
@@ -2352,15 +2206,14 @@ html {
 }
 
 [dir="ltr"] .map-content-horizontal {
-    flex-direction: row; /* في الإنجليزي النص يسار والخريطة يمين */
+    flex-direction: row; 
 }
 
-/* --- Floating Language Button --- */
 .lang-float {
     position: fixed;
-    bottom: 110px; /* فوق الواتساب بمسافة */
+    bottom: 110px;
     left: 30px;
-    background-color: #e3c74b; /* لون كحلي لتمييزه عن الواتساب */
+    background-color: #e3c74b;
     color: #fff;
     border-radius: 50px;
     width: 60px;
@@ -2386,21 +2239,15 @@ html {
 }
 
 .lang-float:hover {
-    background-color: var(--primary); /* يتحول للأحمر عند الوقوف عليه */
+    background-color: var(--primary);
     transform: scale(1.1);
 }
 
-/* تأكد من أن الواتساب في نفس الجهة في الإنجليزي */
 [dir="ltr"] .whatsapp-float {
     left: 30px;
     right: auto;
 }
 
-/* ============================================================
-   إصلاح نهائي وحاسم للنسخة الإنجليزية (LTR)
-   ============================================================ */
-
-/* إجبار الجسم والمحتوى على الاتجاه من اليسار لليمين */
 html[dir="ltr"], 
 html[dir="ltr"] body, 
 html[dir="ltr"] .post-details, 
@@ -2409,7 +2256,6 @@ html[dir="ltr"] .post-content-body {
     text-align: left !important;
 }
 
-/* 1. إصلاح النقط (الدوائر) - نقلها من اليمين لليسار */
 html[dir="ltr"] .article-list {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -2419,32 +2265,30 @@ html[dir="ltr"] .article-list {
 html[dir="ltr"] .article-list li {
     text-align: left !important;
     padding-right: 0 !important;
-    padding-left: 25px !important; /* مسافة للنقطة */
+    padding-left: 25px !important; 
 }
 
 html[dir="ltr"] .article-list li::before {
-    right: auto !important; /* إلغاء التثبيت يميناً */
-    left: 0 !important;     /* تثبيت يساراً */
+    right: auto !important; 
+    left: 0 !important;
     content: "•" !important;
 }
 
-/* 2. إصلاح صندوق النصيحة (SSH Tip) والخط الأحمر */
 html[dir="ltr"] .advice-box {
     text-align: left !important;
-    border-right: none !important; /* حذف الخط من اليمين */
-    border-left: 6px solid #d11b3d !important; /* وضع الخط على اليسار */
+    border-right: none !important; 
+    border-left: 6px solid #d11b3d !important;
     padding: 25px 30px !important;
 }
 
 html[dir="ltr"] .advice-box h4 {
     text-align: left !important;
-    justify-content: flex-start !important; /* نقل العنوان والأيقونة لليسار */
+    justify-content: flex-start !important; 
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
 }
 
-/* 3. إصلاح أي نص بيبدأ بنقطة غلط (تعديل الـ Direction) */
 html[dir="ltr"] p, 
 html[dir="ltr"] h1, 
 html[dir="ltr"] h2, 
@@ -2453,7 +2297,6 @@ html[dir="ltr"] h3 {
     text-align: left !important;
 }
 
-/* 4. التأكد من أن الأرقام بتظهر (1.) مش (.1) */
 html[dir="ltr"] .post-content-body h3 {
     display: block !important;
     unicode-bidi: isolate !important;
