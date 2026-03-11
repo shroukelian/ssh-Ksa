@@ -81,7 +81,7 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -2204,3 +2204,257 @@ html {
     .footer-grid { grid-template-columns: 1fr; }
 }
 
+
+
+/* --- تعديلات اللغة الإنجليزية LTR --- */
+
+/* عندما تكون الصفحة إنجليزية */
+[dir="ltr"] body {
+    text-align: left;
+}
+
+/* قلب مكان الخط الأحمر في الهيدر */
+[dir="ltr"] .sub-label .red-line, 
+[dir="ltr"] .sub-heading .red-line {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+/* قلب مكان اللوجو المثبت */
+[dir="ltr"] .right-logo-box {
+    right: auto;
+    left: 40px; /* ينتقل لليسار في النسخة الإنجليزية */
+}
+
+/* قلب شكل المثلث المائل في الهيرو */
+[dir="ltr"] .diagonal-bg {
+    right: auto;
+    left: 0;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+
+/* تعديل القوائم النقطية */
+[dir="ltr"] .article-list {
+    padding-right: 0;
+    padding-left: 20px;
+}
+[dir="ltr"] .article-list li {
+    padding-right: 0;
+    padding-left: 25px;
+}
+[dir="ltr"] .article-list li::before {
+    right: auto;
+    left: 0;
+}
+
+/* الفوتر في الإنجليزي */
+[dir="ltr"] .f-red-line {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* ============================================================
+   ضبط اتجاه النصوص والعناصر للنسخة الإنجليزية (LTR)
+   ============================================================ */
+
+[dir="ltr"] body {
+    text-align: left; /* توجيه النص العام لليسار */
+}
+
+/* 1. التوب بار والناف بار */
+[dir="ltr"] .contact-info {
+    flex-direction: row;
+}
+
+[dir="ltr"] .social-label {
+    margin-left: 0;
+    margin-right: 10px; /* مسافة النص عن الأيقونات من اليمين */
+}
+
+[dir="ltr"] .logo-text {
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 0;
+    border-left: 2px solid #eee; /* نقل الخط الفاصل لليسار */
+    border-right: none;
+}
+
+/* 2. الهيرو سكشن (Hero Section) */
+[dir="ltr"] .hero-content {
+    text-align: left !important; /* محاذاة العنوان والوصف لليسار */
+}
+
+[dir="ltr"] .sub-heading {
+    justify-content: flex-start !important;
+}
+
+[dir="ltr"] .sub-heading .red-line {
+    margin-right: 10px; /* الخط الأحمر قبل الكلام */
+    margin-left: 0;
+}
+
+[dir="ltr"] .hero-btns {
+    justify-content: flex-start !important;
+}
+
+[dir="ltr"] .hero-btns .btn {
+    margin-right: 15px; /* مسافة بين الأزرار */
+    margin-left: 0;
+}
+
+/* 3. قسم التعريف (About Us) */
+[dir="ltr"] .company-intro {
+    text-align: left;
+}
+
+[dir="ltr"] .intro-header .sub-label {
+    justify-content: flex-start;
+}
+
+[dir="ltr"] .intro-content p {
+    text-align: left; /* أهم جزء لإصلاح الفقرات في الصورة */
+}
+
+[dir="ltr"] .vision-2030-box {
+    border-left: 5px solid var(--primary); /* نقل الخط الأحمر لليسار */
+    border-right: none;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+[dir="ltr"] .cta-btn-link {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+/* 4. الخدمات (Services) */
+[dir="ltr"] .service-box {
+    text-align: left;
+}
+
+[dir="ltr"] .section-head {
+    text-align: left;
+}
+
+/* 5. الفوتر (Footer) */
+[dir="ltr"] .f-contact-list a {
+    justify-content: flex-start;
+    flex-direction: row; /* ضبط الأرقام بجانب الأيقونات */
+}
+
+[dir="ltr"] .f-head {
+    justify-content: flex-start;
+}
+
+[dir="ltr"] .loc-list p i {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+[dir="ltr"] .map-content-horizontal {
+    flex-direction: row; /* في الإنجليزي النص يسار والخريطة يمين */
+}
+
+/* --- Floating Language Button --- */
+.lang-float {
+    position: fixed;
+    bottom: 110px; /* فوق الواتساب بمسافة */
+    left: 30px;
+    background-color: #e3c74b; /* لون كحلي لتمييزه عن الواتساب */
+    color: #fff;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 10000;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.lang-float i {
+    font-size: 20px;
+}
+
+.lang-float .lang-text {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.lang-float:hover {
+    background-color: var(--primary); /* يتحول للأحمر عند الوقوف عليه */
+    transform: scale(1.1);
+}
+
+/* تأكد من أن الواتساب في نفس الجهة في الإنجليزي */
+[dir="ltr"] .whatsapp-float {
+    left: 30px;
+    right: auto;
+}
+
+/* ============================================================
+   إصلاح نهائي وحاسم للنسخة الإنجليزية (LTR)
+   ============================================================ */
+
+/* إجبار الجسم والمحتوى على الاتجاه من اليسار لليمين */
+html[dir="ltr"], 
+html[dir="ltr"] body, 
+html[dir="ltr"] .post-details, 
+html[dir="ltr"] .post-content-body {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* 1. إصلاح النقط (الدوائر) - نقلها من اليمين لليسار */
+html[dir="ltr"] .article-list {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-left: 20px !important;
+}
+
+html[dir="ltr"] .article-list li {
+    text-align: left !important;
+    padding-right: 0 !important;
+    padding-left: 25px !important; /* مسافة للنقطة */
+}
+
+html[dir="ltr"] .article-list li::before {
+    right: auto !important; /* إلغاء التثبيت يميناً */
+    left: 0 !important;     /* تثبيت يساراً */
+    content: "•" !important;
+}
+
+/* 2. إصلاح صندوق النصيحة (SSH Tip) والخط الأحمر */
+html[dir="ltr"] .advice-box {
+    text-align: left !important;
+    border-right: none !important; /* حذف الخط من اليمين */
+    border-left: 6px solid #d11b3d !important; /* وضع الخط على اليسار */
+    padding: 25px 30px !important;
+}
+
+html[dir="ltr"] .advice-box h4 {
+    text-align: left !important;
+    justify-content: flex-start !important; /* نقل العنوان والأيقونة لليسار */
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+/* 3. إصلاح أي نص بيبدأ بنقطة غلط (تعديل الـ Direction) */
+html[dir="ltr"] p, 
+html[dir="ltr"] h1, 
+html[dir="ltr"] h2, 
+html[dir="ltr"] h3 {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* 4. التأكد من أن الأرقام بتظهر (1.) مش (.1) */
+html[dir="ltr"] .post-content-body h3 {
+    display: block !important;
+    unicode-bidi: isolate !important;
+}
