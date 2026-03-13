@@ -2302,19 +2302,16 @@ html[dir="ltr"] .post-content-body h3 {
     unicode-bidi: isolate !important;
 }
 
-/* تنسيق الصور الجديدة بدلاً من الأيقونات */
 .service-img-icon {
-    width: 70px;          /* يمكنك تكبير أو تصغير الحجم من هنا */
+    width: 70px;          
     height: 70px;
-    object-fit: contain;  /* لضمان عدم تمطط الصورة */
-    margin-bottom: 25px;  /* نفس مسافة الأيقونات القديمة */
+    object-fit: contain;  
+    margin-bottom: 25px;  
     display: inline-block;
-    /* إضافة فلتر بسيط إذا أردت جعل الصور تبرز أكثر (اختياري) */
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
     transition: transform 0.3s ease;
 }
 
-/* تأثير عند تمرير الماوس على الصندوق */
 .service-box:hover .service-img-icon {
     transform: scale(1.1);
 }
@@ -2337,7 +2334,6 @@ html[dir="ltr"] .post-content-body h3 {
     color: #fff;
 }
 
-/* تنسيق جدول المقارنة */
 .table-container {
     overflow-x: auto;
     margin: 40px 0;
