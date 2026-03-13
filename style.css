@@ -90,13 +90,13 @@ body {
 }
 
 .logo img {
-    height: 64px;
+    height: 74px;
 }
 
 .logo .abbr {
     display: block;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 3.8rem;
     color: var(--secondary);
     line-height: 1;
 }
@@ -2300,4 +2300,78 @@ html[dir="ltr"] h3 {
 html[dir="ltr"] .post-content-body h3 {
     display: block !important;
     unicode-bidi: isolate !important;
+}
+
+/* تنسيق الصور الجديدة بدلاً من الأيقونات */
+.service-img-icon {
+    width: 70px;          /* يمكنك تكبير أو تصغير الحجم من هنا */
+    height: 70px;
+    object-fit: contain;  /* لضمان عدم تمطط الصورة */
+    margin-bottom: 25px;  /* نفس مسافة الأيقونات القديمة */
+    display: inline-block;
+    /* إضافة فلتر بسيط إذا أردت جعل الصور تبرز أكثر (اختياري) */
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس على الصندوق */
+.service-box:hover .service-img-icon {
+    transform: scale(1.1);
+}
+
+.stat-highlight-box {
+    background: #1a2c4e;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    border-right: 5px solid #d11b3d;
+}
+.stat-highlight-box i {
+    color: #d11b3d;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.stat-highlight-box strong {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+/* تنسيق جدول المقارنة */
+.table-container {
+    overflow-x: auto;
+    margin: 40px 0;
+}
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.comparison-table th {
+    background: var(--secondary);
+    color: #fff;
+    padding: 15px;
+    text-align: right;
+}
+.comparison-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #475569;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:nth-child(even) { background: #f8fafc; }
+
+.category-tag {
+    display: inline-block;
+    background: #fff5f6;
+    color: #d11b3d;
+    padding: 3px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    border: 1px solid rgba(209, 27, 61, 0.1);
 }
