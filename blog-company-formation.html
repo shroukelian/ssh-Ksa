@@ -9,14 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
-    <nav class="navbar">
+    <!-- Navbar Centered -->
+    <nav class="navbar scrolled">
         <div class="container nav-container">
+
+          <!-- اللوجو -->
             <div class="logo">
                 <img src="images/logo.png" alt="SSH Logo">
                 <div class="logo-text">
@@ -24,105 +27,134 @@
                     <span class="full">Strategic Solution Home</span>
                 </div>
             </div>
+            <!-- روابط التنقل -->
             <ul class="nav-links">
                 <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="index.html#about">من نحن</a></li>
                 <li><a href="index.html#services">خدماتنا</a></li>
-                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="blog.html" class="active">المدونة</a></li>
                 <li><a href="contact.html">اتصل بنا</a></li>
             </ul>
+            <!-- زر الاتصال -->
             <div class="nav-cta">
-                <a href="contact.html" class="btn-cta">احصل على عرض أسعار</a>
+                <a href="contact.html" class="btn-cta">احجز استشارة مجانية الآن</a>
             </div>
+  
+
             <div class="menu-btn"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
+    <!-- بنر العنوان -->
+    <div class="page-banner">
+        <div class="container">
+            <h1>المدونة</h1>
+            <p><a href="index.html">الرئيسية</a> / المدونة</p>
+        </div>
+    </div>
+
+    <!-- محتوى المقال -->
     <article class="post-details">
         <div class="container">
             <header class="post-header-area">
-                <h1 class="post-main-title">تأسيس الأعمال في المملكة العربية السعودية: دليلك الشامل في عصر رؤية 2030
-                </h1>
+                <h1 class="post-main-title">تأسيس الأعمال في المملكة العربية السعودية: دليلك الشامل في عصر رؤية 2030</h1>
                 <div class="post-meta-data">
                     <span><i class="fas fa-user-tie"></i> بواسطة: فريق SSH الإستراتيجي</span>
                     <span><i class="fas fa-calendar-alt"></i> مارس 2025</span>
                 </div>
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000"
-                    class="post-featured-img" alt="Company Formation KSA 2030">
+                    class="post-featured-img" alt="Establishing Business in KSA 2030">
             </header>
 
             <div class="post-content-body">
-                <p>تحتل المملكة العربية السعودية مكانةً متقدمة في مؤشر سهولة ممارسة الأعمال عالمياً، بفضل الإصلاحات
-                    الجوهرية التي أطلقتها رؤية 2030 لتنويع الاقتصاد وجذب الاستثمارات. تأسيس الأعمال في المملكة اليوم
-                    أسرع وأبسط من أي وقت مضى.</p>
+                <p>تحتل المملكة العربية السعودية مكانةً متقدمة في مؤشر سهولة ممارسة الأعمال عالمياً، بفضل الإصلاحات الجوهرية التي أطلقتها رؤية 2030 لتنويع الاقتصاد وجذب الاستثمارات. تأسيس الأعمال في المملكة اليوم أسرع وأبسط من أي وقت مضى، مع استمرار توافر فرص استثمارية ذهبية في قطاعات متعددة كالسياحة والترفيه والتقنية والصناعة والرعاية الصحية.</p>
 
                 <h3>1. لماذا تختار المملكة العربية السعودية لتأسيس أعمالك؟</h3>
                 <ul class="article-list">
-                    <li><strong>اقتصاد ضخم:</strong> أكبر اقتصاد في العالم العربي بناتج يتجاوز 1 تريليون دولار.</li>
-                    <li><strong>سوق استهلاكي:</strong> أكثر من 35 مليون نسمة بقوة شرائية مرتفعة جداً.</li>
-                    <li><strong>بنية تحتية عالمية:</strong> موانئ، طرق، وشبكات اتصالات متطورة تدعم اللوجستيات.</li>
-                    <li><strong>حوافز استثمارية:</strong> إعفاءات ضريبية ودعم حكومي للمستثمرين الأجانب والمحليين.</li>
+                    <li><strong>اقتصاد ضخم:</strong> أكبر اقتصاد في العالم العربي بناتج محلي يتجاوز 1 تريليون دولار.</li>
+                    <li><strong>سوق استهلاكي ضخم:</strong> أكثر من 35 مليون نسمة بقوة شرائية مرتفعة.</li>
+                    <li><strong>بنية تحتية عالمية:</strong> موانئ، مطارات، طرق، وشبكات اتصالات متطورة.</li>
+                    <li><strong>حوافز استثمارية:</strong> إعفاءات ضريبية، منح، ودعم حكومي للمستثمرين.</li>
+                    <li><strong>تحولات رؤية 2030:</strong> فتح قطاعات جديدة أمام الاستثمار الأجنبي.</li>
+                    <li><strong>ملكية أجنبية كاملة:</strong> إمكانية تملّك الأجانب 100% في كثير من القطاعات.</li>
                 </ul>
                 <div class="advice-box">
                     <h4>نصيحة SSH:</h4>
-                    <p>قبل البدء، ادرس متطلبات القطاع الخاص بك بدقة؛ فبعض الأنشطة تستلزم تراخيص خاصة من هيئات متخصصة أو
-                        شروطاً محددة للمستثمر الأجنبي.</p>
+                    <p>قبل التأسيس، ادرس متطلبات القطاع الذي ستعمل فيه، فبعض القطاعات تستلزم شريكاً سعودياً أو لا تزال مقيدة للمستثمرين الأجانب.</p>
                 </div>
 
                 <h3>2. أنواع الكيانات القانونية المتاحة للتأسيس</h3>
-                <p><strong>أ. الشركة ذات المسؤولية المحدودة (LLC):</strong> الأكثر طلباً للشركات الصغيرة والمتوسطة،
-                    وتتميز بمرونة عدد الشركاء.</p>
-                <p><strong>ب. الشركة المساهمة:</strong> مناسبة للمشاريع الضخمة التي تتطلب رأس مال يبدأ من 500,000 ريال
-                    وتسمح بالاكتتاب.</p>
-                <p><strong>ج. الفرع الأجنبي:</strong> يُتيح للشركات العالمية العمل في السعودية دون تأسيس كيان قانوني
-                    مستقل كلياً.</p>
+                <p><strong>أ. الشركة ذات المسؤولية المحدودة (LLC):</strong> الأكثر شيوعاً للشركات الصغيرة والمتوسطة. يتراوح عدد الشركاء من 1 إلى 50 شريكاً. تكلفة التأسيس منخفضة نسبياً.</p>
+                <p><strong>ب. الشركة المساهمة (Joint Stock Company):</strong> مناسبة للمشاريع الكبيرة التي تحتاج رأس مال ضخماً. الحد الأدنى لرأس المال 500,000 ريال. تتيح الاكتتاب العام على المدى البعيد.</p>
+                <p><strong>ج. الفرع الأجنبي (Foreign Branch):</strong> يُتيح للشركات الأجنبية العمل في السعودية دون تأسيس كيان مستقل، مع خضوع الفرع لقوانين الشركة الأم.</p>
+                <p><strong>د. مكتب تمثيل أجنبي:</strong> للشركات الأجنبية التي تريد استكشاف السوق دون مزاولة نشاط تجاري مباشر.</p>
+                <p><strong>هـ. شركة الشخص الواحد:</strong> مثالية لرواد الأعمال الأفراد الذين يرغبون في حماية أصولهم الشخصية مع الإدارة المنفردة.</p>
 
                 <h3>3. خطوات تأسيس الشركة في السعودية</h3>
                 <ol class="article-steps">
-                    <li><strong>دراسة السوق:</strong> التأكد من إمكانية ممارسة النشاط وتحديد الموقع الجغرافي.</li>
-                    <li><strong>حجز الاسم التجاري:</strong> عبر منصة وزارة التجارة الإلكترونية.</li>
-                    <li><strong>إعداد عقد التأسيس:</strong> تحديد رأس المال، الحصص، وآليات الإدارة.</li>
-                    <li><strong>التسجيل التجاري والضريبي:</strong> الحصول على السجل التجاري والرقم الضريبي من ZATCA.
-                    </li>
-                    <li><strong>المنصات الحكومية:</strong> التسجيل في مدد، قوى، والتأمينات الاجتماعية (GOSI).</li>
+                    <li><strong>الخطوة الأولى: دراسة السوق وتحديد النشاط:</strong> حدد بدقة طبيعة نشاطك التجاري، والتحقق من إمكانية ممارسته للمستثمرين المحليين أو الأجانب وفق قوائم الأنشطة المحظورة والمقيدة.</li>
+                    <li><strong>الخطوة الثانية: حجز الاسم التجاري:</strong> عبر منصة وزارة التجارة (mc.gov.sa)، حجز اسم تجاري مميز غير مستخدم مسبقاً ومتوافق مع ضوابط التسمية.</li>
+                    <li><strong>الخطوة الثالثة: إعداد عقد التأسيس:</strong> إعداد عقد تأسيس أو نظام أساسي محكم يحدد: أهداف الشركة، رأس المال، حصص الشركاء، آليات الإدارة واتخاذ القرارات، وسياسة توزيع الأرباح.</li>
+                    <li><strong>الخطوة الرابعة: التسجيل التجاري:</strong> تقديم طلب التسجيل عبر منصة وزارة التجارة مع المستندات المطلوبة للحصول على السجل التجاري.</li>
+                    <li><strong>الخطوة الخامسة: التسجيل الضريبي:</strong> التسجيل لدى هيئة الزكاة والضريبة والجمارك (ZATCA) للحصول على الرقم الضريبي، والتسجيل في VAT إذا استوجبت الحاجة.</li>
+                    <li><strong>الخطوة السادسة: التسجيل في المنصات الحكومية:</strong> يشمل منصة مساند (للعمالة)، منصة مدد (لإدارة الرواتب)، المؤسسة العامة للتأمينات الاجتماعية (GOSI)، وبرنامج نطاقات (Saudization).</li>
+                    <li><strong>الخطوة السابعة: استخراج التراخيص المهنية:</strong> بناءً على طبيعة النشاط، قد تحتاج إلى تراخيص من جهات متعددة مثل وزارة التجارة، وزارة الصحة، وزارة الاتصالات، أو هيئة الاتصالات.</li>
+                    <li><strong>الخطوة الثامنة: فتح الحساب البنكي التجاري:</strong> بعد الحصول على السجل التجاري والمستندات التأسيسية، يمكنك فتح حساب بنكي تجاري لممارسة نشاطك رسمياً.</li>
                 </ol>
 
-                <div class="advice-box warning" style="border-right-color: #d11b3d; background: #fff5f6;">
-                    <h4><i class="fas fa-handshake"></i> نصيحة إستراتيجية:</h4>
-                    <p>الاستعانة بمستشار قانوني ومحاسبي في مرحلة صياغة "عقد التأسيس" يضمن لك حقوقك ويجنبك ثغرات قانونية
-                        قد تكلفك الكثير مستقبلاً.</p>
+                <div class="advice-box warning">
+                    <h4>نصيحة إستراتيجية:</h4>
+                    <p>استعن بمستشار قانوني ومحاسبي منذ البداية لتجنب أخطاء في عقد التأسيس قد تكون مكلفة جداً لتصحيحها لاحقاً.</p>
                 </div>
 
-                <h3>4. متطلبات تأسيس الشركات الأجنبية</h3>
-                <p>للمستثمرين الأجانب، يجب الحصول على ترخيص استثمار من <strong>وزارة الاستثمار (MISA)</strong>، وتوثيق
-                    كافة مستندات الشركة الأم، والالتزام بنسب السعودة المطلوبة في برنامج (نطاقات).</p>
+                <h3>4. متطلبات تأسيس الشركات الأجنبية في السعودية</h3>
+                <ul class="article-list">
+                    <li>الحصول على ترخيص استثمار أجنبي من وزارة الاستثمار (MISA).</li>
+                    <li>توثيق مستندات الشركة الأم وتصديقها بالأبوستيل أو من السفارة السعودية.</li>
+                    <li>تقديم دراسة جدوى ومتطلبات رأس المال الأدنى في بعض القطاعات.</li>
+                    <li>الالتزام بنسب السعودة (نطاقات) في التوظيف.</li>
+                </ul>
 
                 <h3>5. خدمات SSH لتأسيس الأعمال</h3>
-                <p>فريقنا يتولى عنك كافة التعقيدات: من اختيار الهيكل القانوني، صياغة العقود، إنجاز السجل التجاري
-                    والضريبي، وحتى استخراج التراخيص المهنية وإعداد الهيكل المالي منذ اليوم الأول.</p>
+                <ul class="article-list">
+                    <li>الاستشارة القانونية لاختيار الهيكل المناسب.</li>
+                    <li>إعداد عقد التأسيس والنظام الأساسي.</li>
+                    <li>إنجاز إجراءات التسجيل التجاري والضريبي نيابةً عنك.</li>
+                    <li>استخراج جميع التراخيص اللازمة.</li>
+                    <li>التسجيل في منصات الموارد البشرية الحكومية.</li>
+                    <li>إعداد الهيكل المالي والمحاسبي منذ اليوم الأول.</li>
+                </ul>
 
-                <p class="final-cta">ابدأ رحلتك التجارية في قلب الاقتصاد العربي اليوم. تواصل مع خبراء
-                    <strong>SSH</strong> لضمان توافق 100% مع المتطلبات القانونية. <a href="contact.html">اطلب استشارة
-                        التأسيس الآن</a>.
-                </p>
+                <p class="final-cta">لتأسيس أعمالك في المملكة العربية السعودية بسهولة وضمان توافق 100% مع المتطلبات القانونية، تواصل مع فريق <strong>SSH</strong> الاستراتيجي الذي يمتلك خبرة واسعة في تأسيس مئات الشركات في المملكة. <a href="contact.html">ابدأ رحلتك التجارية في السعودية اليوم</a>.</p>
             </div>
 
+            <!-- قسم شارك برأيك -->
             <div class="share-opinion-area">
                 <h3 class="opinion-title">شارك برأيك</h3>
-                <p class="opinion-subtitle">* Your email address will not be published. Required fields are marked</p>
+                <p class="opinion-subtitle">* لن يتم نشر بريدك الإلكتروني. الحقول الإجبارية معلمة بـ *</p>
                 <form class="opinion-form">
-                    <div class="field-group full-width"><label>تعليق *</label><textarea rows="6" required></textarea>
+                    <div class="field-group full-width">
+                        <label>تعليق *</label>
+                        <textarea rows="6" required placeholder="اكتب تعليقك هنا"></textarea>
                     </div>
-                    <div class="field-group"><label>Name *</label><input type="text" required></div>
-                    <div class="field-group"><label>Email *</label><input type="email" required></div>
-                    <div class="form-submit-container"><button type="submit" class="submit-opinion-btn">أرسل
-                            تعليقك</button></div>
+                    <div class="field-group">
+                        <label>الاسم *</label>
+                        <input type="text" required placeholder="اسمك الكامل">
+                    </div>
+                    <div class="field-group">
+                        <label>البريد الإلكتروني *</label>
+                        <input type="email" required placeholder="بريدك الإلكتروني">
+                    </div>
+                    <div class="form-submit-container">
+                        <button type="submit" class="submit-opinion-btn">أرسل تعليقك</button>
+                    </div>
                 </form>
             </div>
         </div>
     </article>
 
-    <footer class="premium-footer" style="margin-top: 10px;">
+    <!-- Footer -->
+    <footer class="premium-footer">
         <div class="container footer-grid">
             <div class="footer-column contact-col">
                 <div class="f-head"><span class="f-red-line"></span><span class="f-label">SSH KSA</span></div>
@@ -133,6 +165,7 @@
                     <li><a href="https://ssh-ksa.com">ssh-ksa.com <i class="fas fa-globe"></i></a></li>
                 </ul>
             </div>
+
             <div class="footer-column map-col">
                 <div class="f-head"><span class="f-red-line"></span><span class="f-label">مواقعنا</span></div>
                 <h3 class="f-main-title">أين تجدنا؟</h3>
@@ -145,8 +178,9 @@
                     <img src="images/Map.png" alt="Map" class="map-dots-mini">
                 </div>
             </div>
+
             <div class="footer-column social-col">
-                <div class="f-head"><span class="f-red-line"></span><span class="f-label">تواصل معنا الآن</span></div>
+                <div class="f-head"><span class="f-red-line"></span><span class="f-label">تواصل معنا</span></div>
                 <div class="f-social-icons">
                     <a href="#" class="s-btn"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="s-btn"><i class="fab fa-instagram"></i></a>
@@ -161,17 +195,20 @@
             </div>
         </div>
     </footer>
-    <a href="blog-company-types-en.html" class="lang-float" title="Switch to Arabic">
+
+    <!-- أيقونة اللغة الإنجليزية العائمة -->
+    <a href="blog-company-formation-en.html" class="lang-float" title="Switch to English">
         <i class="fas fa-globe"></i>
-        <span class="lang-text">الانجليزية</span>
+        <span class="lang-text">English</span>
     </a>
+
+    <!-- واتساب -->
     <a href="https://wa.me/966566851495" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
