@@ -1827,7 +1827,7 @@ html {
 .post-meta-data span { margin-left: 20px; }
 
 .post-content-body { max-width: 900px; margin: auto; }
-.post-content-body p { font-size: 1.15rem; line-height: 2.2; color: #334155; margin-bottom: 25px; text-align: justify; }
+.post-content-body p { font-size: 1.15rem; line-height: 2.2; margin-bottom: 25px; text-align: justify; }
 .post-content-body h3 { font-size: 1.8rem; font-weight: 800; color: #1a2c4e; margin: 40px 0 20px; }
 .post-content-body ul { margin-right: 30px; margin-bottom: 30px; }
 .post-content-body li { margin-bottom: 15px; color: #475569; font-size: 1.1rem; }
@@ -2271,7 +2271,7 @@ html[dir="ltr"] .article-list li {
 html[dir="ltr"] .article-list li::before {
     right: auto !important; 
     left: 0 !important;
-    content: "•" !important;
+    /* content: "•" !important; */
 }
 
 html[dir="ltr"] .advice-box {
